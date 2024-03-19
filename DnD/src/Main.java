@@ -32,16 +32,32 @@ public class Main {
         scaa.nextInt();
         uInint = 0;
         System.out.println("");
-        System.out.println("Step 2: Physical Characteristics.");
+        System.out.println("Step 2: Ability Scores");
+        System.out.println("A characters ability scores represent their innate physical and mental attributes,\nThey are: Strength (Str), Dexterity (Dex), Constitution (Con), Intelligence (Int), Wisdom (Wis), and Charisma (Cha).");
+        while (uInint <= 1 || uInint > 5) {
+            System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats\n3:Point buy\n4:Standard array\n5:Randomize my stats please");
+            uInint = scaa.nextInt();
+            if (uInint == 1){
+                System.out.println("(1:");
+            }
+        }
+        System.out.println("(1:");
+        scaa.nextInt();
+
+
+        uInint = 0;
+        System.out.println("");
+        System.out.println("Step 3: Physical Characteristics.");
         System.out.println("Choosing your characters physical description can be a simple fun detail, or it might be important to the core of your character.\n your characters race contributes will contribute to your stats later, other physical characteristics are mostly for flavor, and have little to no mechanical effects.\n(Fantasy race has mechanical effects, and are more akin to species or sub-species than races.)");
         System.out.println("");
         System.out.println("(1:");
 
+
         scaa.nextInt();
         uInint = 0;
         System.out.println("");
-        System.out.println("Step 2: Class");
-        System.out.println("You class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
+        System.out.println("Step 4: Class");
+        System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
         System.out.println("(1:");
 
 
