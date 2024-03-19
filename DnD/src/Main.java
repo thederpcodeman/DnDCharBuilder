@@ -114,6 +114,52 @@ public class Main {
             Integer roll6 = 8;
             ArrayList<Integer> list = new ArrayList<>(Arrays.asList(roll1, roll2, roll3, roll4, roll5, roll6));
             Collections.sort(list);
+            System.out.println("You must assign each of these numbers to one of your stats:");
+            for (Integer i : list){
+                System.out.println(i);
+            }
+            uInint = 0;
+            while (!list.contains((Integer)(uInint))) {
+                System.out.println("what Will your Str score be");
+                uInint = scaa.nextInt();
+            }// ask the user to begin
+            Str = uInint;
+            list.remove((Integer)(uInint));
+            uInint = 0;
+            while (!list.contains((Integer)(uInint))) {
+                System.out.println("Will your Dex score be");
+                uInint = scaa.nextInt();
+            }// ask the user to begin
+            Dex = uInint;
+            list.remove((Integer)(uInint));
+            uInint = 0;
+            while (!list.contains((Integer)(uInint))) {
+                System.out.println("Will your Con score be");
+                uInint = scaa.nextInt();
+            }// ask the user to begin
+            Con = uInint;
+            list.remove((Integer)(uInint));
+            uInint = 0;
+            while (!list.contains((Integer)(uInint))) {
+                System.out.println("Will your Int score be");
+                uInint = scaa.nextInt();
+            }// ask the user to begin
+            Int = uInint;
+            list.remove((Integer)(uInint));
+            uInint = 0;
+            while (!list.contains((Integer)(uInint))) {
+                System.out.println("Will your Wis score be");
+                uInint = scaa.nextInt();
+            }// ask the user to begin
+            Wis = uInint;
+            list.remove((Integer)(uInint));
+            uInint = 0;
+            while (!list.contains((Integer)(uInint))) {
+                System.out.println("Will your Cha score be");
+                uInint = scaa.nextInt();
+            }// ask the user to begin
+            Cha = uInint;
+            list.remove((Integer)(uInint));
 
         }else if (uInint == 4){
 
