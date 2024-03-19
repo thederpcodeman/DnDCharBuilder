@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -49,19 +50,22 @@ public class Main {
         int Wis = 0;
         int Cha = 0;
         if (uInint == 2){
-            int roll1 = rScore();
-            int roll2 = rScore();
-            int roll3 = rScore();
-            int roll4 = rScore();
-            int roll5 = rScore();
-            int roll6 = rScore();
+            Integer roll1 = rScore();
+            Integer roll2 = rScore();
+            Integer roll3 = rScore();
+            Integer roll4 = rScore();
+            Integer roll5 = rScore();
+            Integer roll6 = rScore();
+            ArrayList<Integer> list = new ArrayList<>(Arrays.asList(roll1, roll2, roll3, roll4, roll1, roll6));
         }else if (uInint == 3){
-            int roll1 = 15;
-            int roll2 = 14;
-            int roll3 = 13;
-            int roll4 = 12;
-            int roll5 = 10;
-            int roll6 = 8;
+            Integer roll1 = 15;
+            Integer roll2 = 14;
+            Integer roll3 = 13;
+            Integer roll4 = 12;
+            Integer roll5 = 10;
+            Integer roll6 = 8;
+            ArrayList<Integer> list = new ArrayList<>(Arrays.asList(roll1, roll2, roll3, roll4, roll1, roll6));
+
         }else if (uInint == 4){
 
         }else if (uInint == 5){
