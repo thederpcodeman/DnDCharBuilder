@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Step 2: Ability Scores");
         System.out.println("A characters ability scores represent their innate physical and mental attributes,\nThey are: Strength (Str), Dexterity (Dex), Constitution (Con), Intelligence (Int), Wisdom (Wis), and Charisma (Cha).");
         while (uInint <= 1 || uInint > 6) {
-            System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats (default)\n3:Standard array\n4:Point buy\n5:Randomize my stats please\n6:I'd like to apply my stats randomly");
+            System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats (default)\n3:Standard array\n4:Point buy\n5:Randomize my stats please\n6:I'd like to apply my stats manually");
             uInint = scaa.nextInt();
             if (uInint == 1){
                 System.out.println("\nStrength represents physical strength, it is the primary stat of Barbarians, Fighters and Paladins, and determines your carrying capacity\nDexterity represents agility, finesse, and speed, it is the primary stat of Fighters, Monks, and Rangers, it determines your evasiveness in combat\nConstitution represents your toughness, and determines your maximum HP\nIntelligence represents your memory, book smarts, and ability to think quickly, it is the primary stat of Wizards\nWisdom represents experiential knowledge, street smarts, and, well, wisdom, it is the primary stat of Clerics, Druids, Monks, and Rangers, it determines your passive perception\nCharisma represents your force of personality, it is the primary stat of Bards, Paladins, Sorcerers, and Warlocks.\n");
@@ -61,6 +61,19 @@ public class Main {
             Int = rScore();
             Wis = rScore();
             Cha = rScore();
+        }else if (uInint == 6){
+            System.out.println("What is your Str?");
+            Str = scaa.nextInt();
+            System.out.println("What is your Dex?");
+            Dex = scaa.nextInt();
+            System.out.println("What is your Con?");
+            Con = scaa.nextInt();
+            System.out.println("What is your Int?");
+            Int = scaa.nextInt();
+            System.out.println("What is your Wis?");
+            Wis = scaa.nextInt();
+            System.out.println("What is your Cha?");
+            Cha = scaa.nextInt();
         }
         System.out.println("Your stats:\nStr:" + Str);
         System.out.println("Dex:" + Dex);
