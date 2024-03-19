@@ -57,6 +57,8 @@ public class Main {
             Integer roll5 = rScore();
             Integer roll6 = rScore();
             ArrayList<Integer> list = new ArrayList<>(Arrays.asList(roll1, roll2, roll3, roll4, roll1, roll6));
+            Collections.sort(list);
+
         }else if (uInint == 3){
             Integer roll1 = 15;
             Integer roll2 = 14;
@@ -65,6 +67,7 @@ public class Main {
             Integer roll5 = 10;
             Integer roll6 = 8;
             ArrayList<Integer> list = new ArrayList<>(Arrays.asList(roll1, roll2, roll3, roll4, roll1, roll6));
+            Collections.sort(list);
 
         }else if (uInint == 4){
 
