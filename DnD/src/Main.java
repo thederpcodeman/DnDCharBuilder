@@ -49,9 +49,19 @@ public class Main {
         int Wis = 0;
         int Cha = 0;
         if (uInint == 2){
-
+            int roll1 = rScore();
+            int roll2 = rScore();
+            int roll3 = rScore();
+            int roll4 = rScore();
+            int roll5 = rScore();
+            int roll6 = rScore();
         }else if (uInint == 3){
-
+            int roll1 = 15;
+            int roll2 = 14;
+            int roll3 = 13;
+            int roll4 = 12;
+            int roll5 = 10;
+            int roll6 = 8;
         }else if (uInint == 4){
 
         }else if (uInint == 5){
