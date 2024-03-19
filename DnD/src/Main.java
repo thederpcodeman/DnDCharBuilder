@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -29,20 +31,44 @@ public class Main {
             System.out.println("Are you ready? (y/n)");
             uIn = scaa.nextLine().toLowerCase();
         }
-        scaa.nextInt();
         uInint = 0;
         System.out.println("");
         System.out.println("Step 2: Ability Scores");
         System.out.println("A characters ability scores represent their innate physical and mental attributes,\nThey are: Strength (Str), Dexterity (Dex), Constitution (Con), Intelligence (Int), Wisdom (Wis), and Charisma (Cha).");
-        while (uInint <= 1 || uInint > 5) {
-            System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats\n3:Point buy\n4:Standard array\n5:Randomize my stats please");
+        while (uInint <= 1 || uInint > 6) {
+            System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats (default)\n3:Standard array\n4:Point buy\n5:Randomize my stats please\n6:I'd like to apply my stats randomly");
             uInint = scaa.nextInt();
             if (uInint == 1){
-                System.out.println("(1:");
+                System.out.println("\nStrength represents physical strength, it is the primary stat of Barbarians, Fighters and Paladins, and determines your carrying capacity\nDexterity represents agility, finesse, and speed, it is the primary stat of Fighters, Monks, and Rangers, it determines your evasiveness in combat\nConstitution represents your toughness, and determines your maximum HP\nIntelligence represents your memory, book smarts, and ability to think quickly, it is the primary stat of Wizards\nWisdom represents experiential knowledge, street smarts, and, well, wisdom, it is the primary stat of Clerics, Druids, Monks, and Rangers, it determines your passive perception\nCharisma represents your force of personality, it is the primary stat of Bards, Paladins, Sorcerers, and Warlocks.\n");
             }
         }
-        System.out.println("(1:");
-        scaa.nextInt();
+        int Str = 0;
+        int Dex = 0;
+        int Con = 0;
+        int Int = 0;
+        int Wis = 0;
+        int Cha = 0;
+        if (uInint == 2){
+
+        }else if (uInint == 3){
+
+        }else if (uInint == 4){
+
+        }else if (uInint == 5){
+            Str = rScore();
+            Dex = rScore();
+            Con = rScore();
+            Int = rScore();
+            Wis = rScore();
+            Cha = rScore();
+        }
+        System.out.println("Your stats:\nStr:" + Str);
+        System.out.println("Dex:" + Dex);
+        System.out.println("Con:" + Con);
+        System.out.println("Int:" + Int);
+        System.out.println("Wis:" + Wis);
+        System.out.println("Cha:" + Cha);
+
 
 
         uInint = 0;
@@ -61,5 +87,19 @@ public class Main {
         System.out.println("(1:");
 
 
+    }
+
+    public static int rScore(){
+        ArrayList<Integer> list = new ArrayList<>();
+        Integer d6 = (int) (6 * Math.random() + 1);
+        list.add(d6);
+        d6 = (int) (6 * Math.random() + 1);
+        list.add(d6);
+        d6 = (int) (6 * Math.random() + 1);
+        list.add(d6);
+        d6 = (int) (6 * Math.random() + 1);
+        list.add(d6);
+        Collections.sort(list);
+        return (list.get(1) + list.get(2) + list.get(3));
     }
 }
