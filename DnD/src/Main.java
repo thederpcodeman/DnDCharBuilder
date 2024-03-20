@@ -26,14 +26,14 @@ public class Main {
         scaa.nextLine();
         uIn = "";
         while (!uIn.equals("y")) { //Step 1, just a second are you sure, should be skipped when randomized.
-            System.out.println("");
+            System.out.println();
             System.out.println("Step 1: the most important step.");
             System.out.println("The most important step when creating a character is to create a character concept,\nWhat kind of character are you looking to make?\nWhat kind of character would you enjoy role-playing?");
             System.out.println("Are you ready? (y/n)");
             uIn = scaa.nextLine().toLowerCase();
         }
         uInint = 0;
-        System.out.println("");
+        System.out.println();
         System.out.println("Step 2: Ability Scores");
         System.out.println("A characters ability scores represent their innate physical and mental attributes,\nThey are: Strength (Str), Dexterity (Dex), Constitution (Con), Intelligence (Int), Wisdom (Wis), and Charisma (Cha).");
         while (uInint <= 1 || uInint > 6) {
@@ -63,42 +63,42 @@ public class Main {
                 System.out.println(i);
             }
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("what Will your Str score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Str = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Dex score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Dex = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Con score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Con = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Int score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Int = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Wis score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Wis = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Cha score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
@@ -119,42 +119,42 @@ public class Main {
                 System.out.println(i);
             }
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("what Will your Str score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Str = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Dex score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Dex = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Con score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Con = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Int score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Int = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Wis score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
             Wis = uInint;
             list.remove((Integer)(uInint));
             uInint = 0;
-            while (!list.contains((Integer)(uInint))) {
+            while (!list.contains(uInint)) {
                 System.out.println("Will your Cha score be");
                 uInint = scaa.nextInt();
             }// ask the user to begin
@@ -388,16 +388,15 @@ public class Main {
 
 
         uInint = 0;
-        System.out.println("");
+        System.out.println();
         System.out.println("Step 3: Physical Characteristics.");
         System.out.println("Choosing your characters physical description can be a simple fun detail, or it might be important to the core of your character.\n your characters race contributes will contribute to your stats later, other physical characteristics are mostly for flavor, and have little to no mechanical effects.\n(Fantasy race has mechanical effects, and are more akin to species or sub-species than races.)");
-        System.out.println("");
+        System.out.println();
         System.out.println("(1:");
 
 
         scaa.nextInt();
-        uInint = 0;
-        System.out.println("");
+        System.out.println();
         System.out.println("Step 4: Class");
         System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
         System.out.println("(1:");
@@ -407,7 +406,7 @@ public class Main {
 
     public static int rScore(){
         ArrayList<Integer> list = new ArrayList<>();
-        Integer d6 = (int) (6 * Math.random() + 1);
+        int d6 = (int) (6 * Math.random() + 1);
         list.add(d6);
         d6 = (int) (6 * Math.random() + 1);
         list.add(d6);
