@@ -410,7 +410,19 @@ public class Main {
                         features.add(new Feature("Darkvison", "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Dwarf", "PHB"));
                         features.add(new Feature("Dwarven Resilience", "You have advantage on saving throws against poison, and you have resistance against poison damage.", "Dwarf", "PHB"));
                         features.add(new Feature("Dwarven Combat Training", "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.", "Dwarf", "PHB"));
-                        features.add(new Feature("Tool Proficiency", "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.", "Dwarf", "PHB"));
+                        while (uInint < 1 || uInint > 3) {
+                            System.out.println("As a dwarf you are proficient with one of the following of your choice: 1:smith's tools, 2:brewer's supplies, or 3:mason's tools");
+                        }
+                        if (uInint == 1){
+                            features.add(new Feature("Tool Proficiency", "You gain proficiency with smith's tools.", "Dwarf", "PHB"));
+
+                        }else if (uInint == 2){
+                            features.add(new Feature("Tool Proficiency", "You gain proficiency with brewer's supplies.", "Dwarf", "PHB"));
+
+                        }else if (uInint == 3){
+                            features.add(new Feature("Tool Proficiency", "You gain proficiency with mason's tools.", "Dwarf", "PHB"));
+
+                        }
                         features.add(new Feature("Stonecunning", "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.", "Dwarf", "PHB"));
                         features.add(new Feature("Languages", "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak", "Dwarf", "PHB"));
                         uInint = 0;
