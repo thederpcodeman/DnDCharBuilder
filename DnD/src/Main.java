@@ -163,6 +163,200 @@ public class Main {
 
         }else if (uInint == 4){
 
+            //Point buy
+
+            System.out.println("You have selected:point buy, you have 27 points to spend on your ability scores,\n8's are free, 9's cost 1, 10's cost 2, 11's cost 3, 12's cost 4, 13's cost 5\n\t14's cost 7, 15's cost 9.");
+            uInint = 0;
+            int sPoints = 27;
+            while (uInint < 8 || uInint > 15 || (uInint == 15 && sPoints < 9) || (uInint == 14 && sPoints < 7) || (uInint == 13 && sPoints < 5) || (uInint == 12 && sPoints < 4) || (uInint == 11 && sPoints < 3) || (uInint == 10 && sPoints < 2) || (uInint == 9 && sPoints < 1) ) {
+                System.out.println("Will your Str score be?");
+                System.out.println("You have " + sPoints + " Points left");
+                uInint = scaa.nextInt();
+            }
+            Str = uInint;
+            switch (uInint){
+                case 9:
+                    sPoints -= 1;
+                    break;
+                case 10:
+                    sPoints -= 2;
+                    break;
+                case 11:
+                    sPoints -= 3;
+                    break;
+                case 12:
+                    sPoints -= 4;
+                    break;
+                case 13:
+                    sPoints -= 5;
+                    break;
+                case 14:
+                    sPoints -= 7;
+                    break;
+                case 15:
+                    sPoints -= 9;
+                    break;
+            }
+            uInint = 0;
+
+            while (uInint < 8 || uInint > 15 || (uInint == 15 && sPoints < 9) || (uInint == 14 && sPoints < 7) || (uInint == 13 && sPoints < 5) || (uInint == 12 && sPoints < 4) || (uInint == 11 && sPoints < 3) || (uInint == 10 && sPoints < 2) || (uInint == 9 && sPoints < 1) ) {
+                System.out.println("Will your Dex score be?");
+                System.out.println("You have " + sPoints + " Points left");
+                uInint = scaa.nextInt();
+            }
+            Dex = uInint;
+            switch (uInint){
+                case 9:
+                    sPoints -= 1;
+                    break;
+                case 10:
+                    sPoints -= 2;
+                    break;
+                case 11:
+                    sPoints -= 3;
+                    break;
+                case 12:
+                    sPoints -= 4;
+                    break;
+                case 13:
+                    sPoints -= 5;
+                    break;
+                case 14:
+                    sPoints -= 7;
+                    break;
+                case 15:
+                    sPoints -= 9;
+                    break;
+            }
+            uInint = 0;
+
+            while (uInint < 8 || uInint > 15 || (uInint == 15 && sPoints < 9) || (uInint == 14 && sPoints < 7) || (uInint == 13 && sPoints < 5) || (uInint == 12 && sPoints < 4) || (uInint == 11 && sPoints < 3) || (uInint == 10 && sPoints < 2) || (uInint == 9 && sPoints < 1) ) {
+                System.out.println("Will your Con score be?");
+                System.out.println("You have " + sPoints + " Points left");
+                uInint = scaa.nextInt();
+            }
+            Con = uInint;
+            switch (uInint){
+                case 9:
+                    sPoints -= 1;
+                    break;
+                case 10:
+                    sPoints -= 2;
+                    break;
+                case 11:
+                    sPoints -= 3;
+                    break;
+                case 12:
+                    sPoints -= 4;
+                    break;
+                case 13:
+                    sPoints -= 5;
+                    break;
+                case 14:
+                    sPoints -= 7;
+                    break;
+                case 15:
+                    sPoints -= 9;
+                    break;
+            }
+            uInint = 0;
+
+            while (uInint < 8 || uInint > 15 || (uInint == 15 && sPoints < 9) || (uInint == 14 && sPoints < 7) || (uInint == 13 && sPoints < 5) || (uInint == 12 && sPoints < 4) || (uInint == 11 && sPoints < 3) || (uInint == 10 && sPoints < 2) || (uInint == 9 && sPoints < 1) ) {
+                System.out.println("Will your Int score be?");
+                System.out.println("You have " + sPoints + " Points left");
+                uInint = scaa.nextInt();
+            }
+            Int = uInint;
+            switch (uInint){
+                case 9:
+                    sPoints -= 1;
+                    break;
+                case 10:
+                    sPoints -= 2;
+                    break;
+                case 11:
+                    sPoints -= 3;
+                    break;
+                case 12:
+                    sPoints -= 4;
+                    break;
+                case 13:
+                    sPoints -= 5;
+                    break;
+                case 14:
+                    sPoints -= 7;
+                    break;
+                case 15:
+                    sPoints -= 9;
+                    break;
+            }
+            uInint = 0;
+
+            while (uInint < 8 || uInint > 15 || (uInint == 15 && sPoints < 9) || (uInint == 14 && sPoints < 7) || (uInint == 13 && sPoints < 5) || (uInint == 12 && sPoints < 4) || (uInint == 11 && sPoints < 3) || (uInint == 10 && sPoints < 2) || (uInint == 9 && sPoints < 1) ) {
+                System.out.println("Will your Wis score be?");
+                System.out.println("You have " + sPoints + " Points left");
+                uInint = scaa.nextInt();
+            }
+            Wis = uInint;
+            switch (uInint){
+                case 9:
+                    sPoints -= 1;
+                    break;
+                case 10:
+                    sPoints -= 2;
+                    break;
+                case 11:
+                    sPoints -= 3;
+                    break;
+                case 12:
+                    sPoints -= 4;
+                    break;
+                case 13:
+                    sPoints -= 5;
+                    break;
+                case 14:
+                    sPoints -= 7;
+                    break;
+                case 15:
+                    sPoints -= 9;
+                    break;
+            }
+            uInint = 0;
+
+            while (uInint < 8 || uInint > 15 || (uInint == 15 && sPoints < 9) || (uInint == 14 && sPoints < 7) || (uInint == 13 && sPoints < 5) || (uInint == 12 && sPoints < 4) || (uInint == 11 && sPoints < 3) || (uInint == 10 && sPoints < 2) || (uInint == 9 && sPoints < 1) ) {
+                System.out.println("Will your Cha score be?");
+                System.out.println("You have " + sPoints + " Points left");
+                uInint = scaa.nextInt();
+            }
+            Cha = uInint;
+            switch (uInint){
+                case 9:
+                    sPoints -= 1;
+                    break;
+                case 10:
+                    sPoints -= 2;
+                    break;
+                case 11:
+                    sPoints -= 3;
+                    break;
+                case 12:
+                    sPoints -= 4;
+                    break;
+                case 13:
+                    sPoints -= 5;
+                    break;
+                case 14:
+                    sPoints -= 7;
+                    break;
+                case 15:
+                    sPoints -= 9;
+                    break;
+            }
+            uInint = 0;
+
+            //End of Point buy
+
+
         }else if (uInint == 5){
             Str = rScore();
             Dex = rScore();
