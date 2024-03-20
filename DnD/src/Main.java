@@ -456,17 +456,30 @@ public class Main {
 
                         uInint = 0;
                         while (uInint < 1 || uInint > 3) {
-                            System.out.println("Their are 3 subraces of dwarf:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
+                            System.out.println("Their are 3 subraces of elves:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
                         }
                         if (uInint == 1){
                             Int += 1;
                             subrace = "High Elf";
+                            features.add(new Feature("Cantrip", "You know one cantrip of your choice from the Wizard spell list. Intelligence is your spellcasting ability for it.", "High Elf", "PHB"));
+                            features.add(new Feature("Elf Weapon Training", "You have proficiency with the longsword, shortsword, shortbow, and longbow.", "High Elf", "PHB"));
+                            features.add(new Feature("Extra Language", "You can read, speak, and write one additional language of your choice.", "High Elf", "PHB"));
+
                         }else if (uInint == 2){
                             Wis += 1;
                             subrace = "Wood Elf";
+                            features.add(new Feature("Elf Weapon Training", "You have proficiency with the longsword, shortsword, shortbow, and longbow.", "Wood Elf", "PHB"));
+                            features.add(new Feature("Fleet of Foot", "Your base walking speed increases to 35 feet.", "Wood Elf", "PHB"));
+                            features.add(new Feature("Mask of the Wild", "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.", "Wood Elf", "PHB"));
+
                         }else if (uInint == 3){
                             Cha += 1;
                             subrace = "Dark Elf";
+                            features.add(new Feature("Superior Darkvision", "Your darkvision has a range of 120 feet, instead of 60.", "Dark Elf", "PHB"));
+                            features.add(new Feature("Sunlight Sensitivity", "You have disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight when you, the target of the attack, or whatever you are trying to perceive is in direct sunlight.", "Dark Elf", "PHB"));
+                            features.add(new Feature("Drow Magic", " You know the Dancing Lights cantrip. When you reach 3rd level, you can cast the Faerie Fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the Darkness spell once and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.", "Dark Elf", "PHB"));
+                            features.add(new Feature("Drow Weapon Training", "You have proficiency with rapiers, shortswords, and hand crossbows.", "Dark Elf", "PHB"));
+
                         }
                     }
                     break;
