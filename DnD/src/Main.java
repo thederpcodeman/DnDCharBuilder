@@ -420,9 +420,13 @@ public class Main {
                         if (uInint == 1){
                             Wis += 1;
                             subrace = "Hill Dwarf";
+                            features.add(new Feature("Dwarven Toughness", "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.", "Hill Dwarf", "PHB"));
+
                         }else if (uInint == 2){
                             Str += 2;
                             subrace = "Mountain Dwarf";
+                            features.add(new Feature("Dwarven Armor Training", "You have proficiency with light and medium armor.", "Mountain Dwarf", "PHB"));
+
                         }
                     }
                     break;
