@@ -395,6 +395,7 @@ public class Main {
         boolean cycle = true;
         String race = "";
         String subrace = "";
+        int speed = 0;
         ArrayList<Feature> features = new ArrayList<>();
         while (cycle) {
             System.out.println("Choose your characters race \n1:Dwarf, 2:Elf, 3:Halfling, 4:Human,\n5:Dragonborn, 6:Gnome, 7:Half-Elf, 8:Half-Orc\n9:Tiefling");
@@ -406,6 +407,7 @@ public class Main {
                     if (scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Dwarf";
+                        speed = 25;
                         Con += 2;
                         features.add(new Feature("Darkvison", "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Dwarf", "PHB"));
                         features.add(new Feature("Dwarven Resilience", "You have advantage on saving throws against poison, and you have resistance against poison damage.", "Dwarf", "PHB"));
@@ -447,6 +449,7 @@ public class Main {
                     if (scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Elf";
+                        speed = 30;
                         Dex += 2;
                         features.add(new Feature("Darkvision", "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Elf", "PHB"));
                         features.add(new Feature("Fey Ancestry", "You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Elf", "PHB"));
@@ -470,6 +473,7 @@ public class Main {
                             subrace = "Wood Elf";
                             features.add(new Feature("Elf Weapon Training", "You have proficiency with the longsword, shortsword, shortbow, and longbow.", "Wood Elf", "PHB"));
                             features.add(new Feature("Fleet of Foot", "Your base walking speed increases to 35 feet.", "Wood Elf", "PHB"));
+                            speed = 35;
                             features.add(new Feature("Mask of the Wild", "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.", "Wood Elf", "PHB"));
 
                         }else if (uInint == 3){
@@ -483,6 +487,7 @@ public class Main {
                         }
                     }
                     break;
+
             }
         }
 
