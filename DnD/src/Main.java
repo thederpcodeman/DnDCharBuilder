@@ -392,7 +392,54 @@ public class Main {
         System.out.println("Step 3: Physical Characteristics.");
         System.out.println("Choosing your characters physical description can be a simple fun detail, or it might be important to the core of your character.\n your characters race contributes will contribute to your stats later, other physical characteristics are mostly for flavor, and have little to no mechanical effects.\n(Fantasy race has mechanical effects, and are more akin to species or sub-species than races.)");
         System.out.println();
-        System.out.println("(1:");
+        boolean cycle = true;
+        String race = "";
+        String subrace = "";
+        while (cycle) {
+            System.out.println("Choose your characters race \n1:Dwarf, 2:Elf, 3:Halfling, 4:Human,\n5:Dragonborn, 6:Gnome, 7:Half-Elf, 8:Half-Orc\n9:Tiefling");
+            uInint = scaa.nextInt();
+            scaa.nextLine();
+            switch(uInint){
+                case 1:
+                    System.out.println("You have selected: Dwarf\nDwarves are short and stout humanoids, dwarves are known for their skill and resilience. They gain a +2 to Con\nAre you sure You would like to play a dwarf: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Dwarf";
+                        Con += 2;
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 2) {
+                            System.out.println("Their are 2 subraces of dwarf:\nThe keen hill dwarves, who gain +1 wisdom and to their HP\nThe strong mountain dwarves, who gain +2 strength, and proficiency in light and medium armor\nWhat would you like to be 1:Hill Dwarf, 2:Mountain dwarf");
+                        }
+                        if (uInint == 1){
+                            Wis += 1;
+                            subrace = "Hill Dwarf";
+                        }else if (uInint == 2){
+                            Str += 2;
+                            subrace = "Mountain Dwarf";
+                        }
+                    }
+                    break;
+                case 2:
+                    System.out.println("You have selected: Elf\nElves are slender and graceful humanoids, elves are known for their beauty, gracefulness and long-lifespans. They gain a +2 to Dex\nAre you sure You would like to play an elf: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Elf";
+                        Dex += 2;
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 2) {
+                            System.out.println("Their are 3 subraces of dwarf:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
+                        }
+                        if (uInint == 1){
+                            Wis += 1;
+                            subrace = "Hill Dwarf";
+                        }else if (uInint == 2){
+                            Str += 2;
+                            subrace = "Mountain Dwarf";
+                        }
+                    }
+                    break;
+            }
+        }
 
 
         scaa.nextInt();
