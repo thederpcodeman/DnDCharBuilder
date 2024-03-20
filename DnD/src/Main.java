@@ -448,6 +448,12 @@ public class Main {
                         cycle = false;
                         race = "Elf";
                         Dex += 2;
+                        features.add(new Feature("Darkvision", "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Elf", "PHB"));
+                        features.add(new Feature("Fey Ancestry", "You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Elf", "PHB"));
+                        features.add(new Feature("Trance", "Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day. The Common word for this meditation is \"trance.\" While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same benefit a human would from 8 hours of sleep.", "Elf", "PHB"));
+                        features.add(new Feature("Keen Senses", "You have proficiency in the Perception skill.", "Elf", "PHB"));
+                        features.add(new Feature("Languages", "You can speak, read, and write Common and Elven.", "Elf", "PHB"));
+
                         uInint = 0;
                         while (uInint < 1 || uInint > 3) {
                             System.out.println("Their are 3 subraces of dwarf:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
