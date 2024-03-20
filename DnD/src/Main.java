@@ -426,15 +426,18 @@ public class Main {
                         race = "Elf";
                         Dex += 2;
                         uInint = 0;
-                        while (uInint < 1 || uInint > 2) {
+                        while (uInint < 1 || uInint > 3) {
                             System.out.println("Their are 3 subraces of dwarf:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
                         }
                         if (uInint == 1){
-                            Wis += 1;
-                            subrace = "Hill Dwarf";
+                            Int += 1;
+                            subrace = "High Elf";
                         }else if (uInint == 2){
-                            Str += 2;
-                            subrace = "Mountain Dwarf";
+                            Wis += 1;
+                            subrace = "Wood Elf";
+                        }else if (uInint == 3){
+                            Cha += 1;
+                            subrace = "Dark Elf";
                         }
                     }
                     break;
