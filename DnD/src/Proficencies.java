@@ -1,4 +1,13 @@
 public class Proficencies {
+    public int Atokens;
+
+    public int Wtokens;
+
+    public int Stokens;
+
+    public int Ttokens;
+
+
 
     private static final Proficencies instance = new Proficencies();
 
