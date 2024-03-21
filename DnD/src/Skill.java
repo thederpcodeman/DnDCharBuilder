@@ -1,13 +1,11 @@
 public class Skill {
     public String name;
-    public int level; // 0:not proficient, 1:Proficient, 2:Expertise
-    public int mod; // 1:Str, 2:Dex, 3:Con, 4:Int, 5:Wis, 6:Cha, Anything_else:None
+    public int level; // 0:not proficient (default), 1:Proficient, 2:Expertise
 
-    public String type; // A, mW, sW, Sk, T, L
-    public Skill(String call, int lv, int m, String t){
+    public String type; // A = Armor, mW = Martial Weapon, sW = Simple weapon, Sk = Skill, T = Toll, L = Language, St = Saving throw, Dr = Resistance (2 is immunity), Dw = Weakness, Ci = Immunity (condition)
+    public Skill(String call, int lv, String t){
         name = call.toLowerCase();
         level = lv;
-        mod = m;
         type = t;
     }
 }
