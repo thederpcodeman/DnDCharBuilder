@@ -524,14 +524,8 @@ public class Main {
                         }else if (uInint == 2){
                             Con += 1;
                             subrace = "Stout Halfling";
-                            skills.addskill(new Skill("longswords", 1,  "mW"));
-                            skills.addskill(new Skill("shortswords", 1,  "mW"));
-                            skills.addskill(new Skill("shortbows", 1,  "sW"));
-                            skills.addskill(new Skill("longbows", 1,  "mW"));
-                            features.add(new Feature("Fleet of Foot", "Your base walking speed increases to 35 feet.", "Wood Elf", "PHB"));
-                            speed = 35;
-                            features.add(new Feature("Mask of the Wild", "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.", "Wood Elf", "PHB"));
-
+                            features.add(new Feature("Stout Resilience", "You have advantage on saving throws against poison, and you have resistance to poison damage.", "Stout Halfling", "PHB"));
+                            skills.addskill(new Skill("poison damage resistance", 1,  "Dr"));
                         }
                     }
                     break;
