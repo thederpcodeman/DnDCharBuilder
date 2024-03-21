@@ -555,6 +555,63 @@ public class Main {
                         }
                     }
                     break;
+                case 5:
+                    System.out.println("You have selected: Dragonborn\nShaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race. They gain a +2 to Str, and +1 to Cha, and have a breath weapon\nAre you sure You would like to play a Dragonborn: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Dragonborn";
+                        speed = 30;
+                        Str += 2;
+                        Cha += 1;
+                        features.add(new Feature("Languages", "You can read, speak, and write Common and Draconic.", "Dragonborn", "PHB"));
+
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 10) {
+                            System.out.println("Their are many types of dragon, and as such many types of Dragonborn, you must choose one from which you inherit:\n1:Black, 2:Blue, 3:Brass, 4:Bronze, 5:Copper, 6:Gold, 7:Green, 8:Red, 9:Silver, 10:White");
+                        }
+                        if (uInint == 1){
+                            subrace = "Black Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Acid damage in a 5' by 30' line. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Black Dragonborn", "PHB"));
+                            skills.addskill(new Skill("acid damage resistance", 1,  "Dr"));
+                        }else if (uInint == 2){
+                            subrace = "Blue Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Lightning damage in a 5' by 30' line. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Blue Dragonborn", "PHB"));
+                            skills.addskill(new Skill("lightning damage resistance", 1,  "Dr"));
+                        }else if (uInint == 3){
+                            subrace = "Brass Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Fire damage in a 5' by 30' line. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Brass Dragonborn", "PHB"));
+                            skills.addskill(new Skill("fire damage resistance", 1,  "Dr"));
+                        }else if (uInint == 4){
+                            subrace = "Bronze Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Lightning damage in a 5' by 30' line. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Bronze Dragonborn", "PHB"));
+                            skills.addskill(new Skill("lightning damage resistance", 1,  "Dr"));
+                        }else if (uInint == 5){
+                            subrace = "Copper Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Acid damage in a 5' by 30' line. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Copper Dragonborn", "PHB"));
+                            skills.addskill(new Skill("acid damage resistance", 1,  "Dr"));
+                        }else if (uInint == 6){
+                            subrace = "Gold Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Fire damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Gold Dragonborn", "PHB"));
+                            skills.addskill(new Skill("fire damage resistance", 1,  "Dr"));
+                        }else if (uInint == 7){
+                            subrace = "Green Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Poison damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Constitution saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Green Dragonborn", "PHB"));
+                            skills.addskill(new Skill("poison damage resistance", 1,  "Dr"));
+                        }else if (uInint == 8){
+                            subrace = "Red Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Fire damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Dexterity saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Red Dragonborn", "PHB"));
+                            skills.addskill(new Skill("fire damage resistance", 1,  "Dr"));
+                        }else if (uInint == 9){
+                            subrace = "Silver Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Cold damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Constitution saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "Silver Dragonborn", "PHB"));
+                            skills.addskill(new Skill("cold damage resistance", 1,  "Dr"));
+                        }else if (uInint == 10){
+                            subrace = "White Dragonborn";
+                            features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Cold damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Constitution saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "White Dragonborn", "PHB"));
+                            skills.addskill(new Skill("cold damage resistance", 1,  "Dr"));
+                        }
+                    }
+                    break;
 
             }
         }
