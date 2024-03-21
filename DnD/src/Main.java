@@ -404,7 +404,7 @@ public class Main {
             scaa.nextLine();
             switch(uInint){
                 case 1:
-                    System.out.println("You have selected: Dwarf\nDwarves are short and stout humanoids, dwarves are known for their skill and resilience. They gain a +2 to Con\nAre you sure You would like to play a dwarf: (y/n)");
+                    System.out.println("You have selected: Dwarf\nDwarves are short and stout humanoids, dwarves are known for their skill and resilience. They gain a +2 to Con and a subclass (+1-2)\nAre you sure You would like to play a dwarf: (y/n)");
                     if (scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Dwarf";
@@ -450,7 +450,7 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("You have selected: Elf\nElves are slender and graceful humanoids, elves are known for their beauty, gracefulness and long-lifespans. They gain a +2 to Dex\nAre you sure You would like to play an elf: (y/n)");
+                    System.out.println("You have selected: Elf\nElves are slender and graceful humanoids, elves are known for their beauty, gracefulness and long-lifespans. They gain a +2 to Dex and a subclass (+1)\nAre you sure You would like to play an elf: (y/n)");
                     if (scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Elf";
@@ -496,6 +496,41 @@ public class Main {
                             skills.addskill(new Skill("rapiers", 1,  "mW"));
                             skills.addskill(new Skill("shortswords", 1,  "mW"));
                             skills.addskill(new Skill("hand crossbows", 1,  "mW"));
+
+                        }
+                    }
+                    break;
+                case 3:
+                    System.out.println("You have selected: Halfling\nHalflings are small and friendly humanoids, Halflings are known for their hospitality, natural luck, and simple natures. They gain a +2 to Dex, and a subclass (+1)\nAre you sure You would like to play a Halfling: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Halfling";
+                        speed = 25;
+                        Dex += 2;
+                        features.add(new Feature("Lucky", "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.", "Halfling", "PHB"));
+                        features.add(new Feature("Brave", "You have advantage on saving throws against being frightened.", "Halfling", "PHB"));
+                        features.add(new Feature("Nimble", "You can move through the space of any creature that is of a size larger than yours.", "Halfling", "PHB"));
+                        features.add(new Feature("Languages", "You can speak, read, and write Common and Halfling.", "Halfling", "PHB"));
+
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 2) {
+                            System.out.println("Their are 2 subraces of halfling:\nThe lightfoot halflings, who gain +1 charisma and can hide more easily\nThe stout halflings, who gain +1 constitution, and resistance to poison\nWhat would you like to be 1:Lightfoot, 2:Stout");
+                        }
+                        if (uInint == 1){
+                            Cha += 1;
+                            subrace = "Lightfoot Halfling";
+                            features.add(new Feature("Naturally Stealthy", "You can attempt to hide even when you are only obscured by a creature that is at least one size larger than you.", "Lightfoot Halfling", "PHB"));
+
+                        }else if (uInint == 2){
+                            Con += 1;
+                            subrace = "Stout Halfling";
+                            skills.addskill(new Skill("longswords", 1,  "mW"));
+                            skills.addskill(new Skill("shortswords", 1,  "mW"));
+                            skills.addskill(new Skill("shortbows", 1,  "sW"));
+                            skills.addskill(new Skill("longbows", 1,  "mW"));
+                            features.add(new Feature("Fleet of Foot", "Your base walking speed increases to 35 feet.", "Wood Elf", "PHB"));
+                            speed = 35;
+                            features.add(new Feature("Mask of the Wild", "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.", "Wood Elf", "PHB"));
 
                         }
                     }
