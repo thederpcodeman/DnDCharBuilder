@@ -405,7 +405,7 @@ public class Main {
             switch(uInint){
                 case 1:
                     System.out.println("You have selected: Dwarf\nDwarves are short and stout humanoids, dwarves are known for their skill and resilience. They gain a +2 to Con and a subclass (+1-2)\nAre you sure You would like to play a dwarf: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if (scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
                         race = "Dwarf";
                         speed = 25;
@@ -418,6 +418,7 @@ public class Main {
                         skills.addskill(new Skill("warhammers", 1, "mW"));
                         while (uInint < 1 || uInint > 3) {
                             System.out.println("As a dwarf you are proficient with one of the following of your choice: 1:smith's tools, 2:brewer's supplies, or 3:mason's tools");
+                            uInint = scaa.nextInt();
                         }
                         if (uInint == 1){
                             skills.addskill(new Skill("smith's tools", 1,  "T"));
@@ -434,6 +435,7 @@ public class Main {
                         uInint = 0;
                         while (uInint < 1 || uInint > 2) {
                             System.out.println("Their are 2 subraces of dwarf:\nThe keen hill dwarves, who gain +1 wisdom and to their HP\nThe strong mountain dwarves, who gain +2 strength, and proficiency in light and medium armor\nWhat would you like to be 1:Hill Dwarf, 2:Mountain dwarf");
+                            uInint = scaa.nextInt();
                         }
                         if (uInint == 1){
                             Wis += 1;
@@ -465,6 +467,7 @@ public class Main {
                         uInint = 0;
                         while (uInint < 1 || uInint > 3) {
                             System.out.println("Their are 3 subraces of elves:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
+                            uInint = scaa.nextInt();
                         }
                         if (uInint == 1){
                             Int += 1;
@@ -515,6 +518,7 @@ public class Main {
                         uInint = 0;
                         while (uInint < 1 || uInint > 2) {
                             System.out.println("Their are 2 subraces of halfling:\nThe lightfoot halflings, who gain +1 charisma and can hide more easily\nThe stout halflings, who gain +1 constitution, and resistance to poison\nWhat would you like to be 1:Lightfoot, 2:Stout");
+                            uInint = scaa.nextInt();
                         }
                         if (uInint == 1){
                             Cha += 1;
@@ -540,6 +544,7 @@ public class Main {
                         uInint = 0;
                         while (uInint < 1 || uInint > 1) {
                             System.out.println("Are you choosing Variant human 1:No, 2:Yes");
+                            uInint = scaa.nextInt();
                         }
                         if (uInint == 1){
                             Str += 1;
@@ -568,6 +573,7 @@ public class Main {
                         uInint = 0;
                         while (uInint < 1 || uInint > 10) {
                             System.out.println("Their are many types of dragon, and as such many types of Dragonborn, you must choose one from which you inherit:\n1:Black, 2:Blue, 3:Brass, 4:Bronze, 5:Copper, 6:Gold, 7:Green, 8:Red, 9:Silver, 10:White");
+                            uInint = scaa.nextInt();
                         }
                         if (uInint == 1){
                             subrace = "Black Dragonborn";
@@ -609,6 +615,39 @@ public class Main {
                             subrace = "White Dragonborn";
                             features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Cold damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Constitution saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "White Dragonborn", "PHB"));
                             skills.addskill(new Skill("cold damage resistance", 1,  "Dr"));
+                        }
+                    }
+                    break;
+                case 6:
+                    System.out.println("You have selected: Gnome\nGnomes are small and inventive humanoids, gnomes are known for their close-night communities, and love of invention and life. They gain a +2 to Int, and a subclass (+1)\nAre you sure You would like to play a Halfling: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Gnome";
+                        speed = 25;
+                        Int += 2;
+                        features.add(new Feature("Darkvision", "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Gnome", "PHB"));
+                        features.add(new Feature("Gnome Cunning", "You have advantage on all Intelligence, Wisdom, and Charisma saves against magic.", "Gnome", "PHB"));
+                        features.add(new Feature("Languages", "You can speak, read, and write Common and Gnomish.", "Gnome", "PHB"));
+
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 2) {
+                            System.out.println("Their are 2 subraces of Gnome:\nForest Gnomes, who gain +1 Dex, can talk to small animals and create small illusions\nRock Gnomes, who gain +1 Con, and passing knowledge of artificey\nWhat would you like to be 1:Forest Gnome, 2:Rock Gnome");
+                            uInint = scaa.nextInt();
+                        }
+                        if (uInint == 1){
+                            Dex += 1;
+                            subrace = "Forest Gnome";
+                            features.add(new Feature("Natural Illusionist", "You know the Minor Illusion cantrip. Intelligence is your spellcasting modifier for it.", "Forest Gnome", "PHB"));
+                            features.add(new Feature("Speak with Small Beasts", "Through sound and gestures, you may communicate simple ideas with Small or smaller beasts", "Forest Gnome", "PHB"));
+                        }else if (uInint == 2){
+                            Con += 1;
+                            subrace = "Rock Gnome";
+                            features.add(new Feature("Artificer's Lore", "Whenever you make an Intelligence (History) check related to magical, alchemical, or technological items, you can add twice your proficiency bonus instead of any other proficiency bonus that may apply.", "Rock Gnome", "PHB"));
+                            features.add(new Feature("Tinker", "You have proficiency with artisan tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp).\nThe device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\nWhen you create a device, choose one of the following options:\n" +
+                                    "Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\n" +
+                                    "Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\n" +
+                                    "Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.", "Rock Gnome", "PHB"));
+
                         }
                     }
                     break;
