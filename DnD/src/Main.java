@@ -651,6 +651,27 @@ public class Main {
                         }
                     }
                     break;
+                    case 7:
+                    System.out.println("You have selected: Half-Elf\nHalf-Elves are half elf, half human, and display a mix of the traits of both. They gain a +2 to Cha, and +1 to 2 other stats\nAre you sure You would like to play a Halfling: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Half-Elf";
+                        speed = 30;
+                        Cha += 2;
+                        features.add(new Feature("Darkvision", "Thanks to your elven heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Half-Elf", "PHB"));
+                        features.add(new Feature("Fey Ancestry", "You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Half-Elf", "PHB"));
+                        features.add(new Feature("Languages", "You can read, speak, and write Common, Elven, and one language of your choice.", "Half-Elf", "PHB"));
+
+                        while (uInint < 1 || uInint > 2) {
+                            System.out.println("As a Half-Elf elf, you have the Half-Elf versatility feature, and must choose one of the following abilities based off of your Elven heritage:\n1:Skill Versatility (General), 2:Elf Weapon Training (High or Wood Elf Heritage), 3: , 4: , 5: , 6:");
+                            uInint = scaa.nextInt();
+                        }
+                        features.add(new Feature("Languages", "You can read, speak, and write Common, Elven, and one language of your choice.", "Half-Elf", "PHB"));
+
+
+
+                    }
+                    break;
 
             }
         }
