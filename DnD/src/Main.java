@@ -529,6 +529,32 @@ public class Main {
                         }
                     }
                     break;
+                case 4:
+                    System.out.println("You have selected: Human\nThey gain +1 to all stats, or optionally, they gain +1 to 2 ability scores of your choice(WIP)\nAre you sure You would like to play a Halfling: (y/n)");
+                    if (scaa.nextLine().toLowerCase().equals("y")){
+                        cycle = false;
+                        race = "Human";
+                        speed = 30;
+                        features.add(new Feature("Languages", "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.", "Human", "PHB"));
+
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 1) {
+                            System.out.println("Are you choosing Variant human 1:No, 2:Yes");
+                        }
+                        if (uInint == 1){
+                            Str += 1;
+                            Dex += 1;
+                            Con += 1;
+                            Int += 1;
+                            Wis += 1;
+                            Cha += 1;
+                            subrace = "Standard Human";
+
+                        }else if (uInint == 2){
+
+                        }
+                    }
+                    break;
 
             }
         }
