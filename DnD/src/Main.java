@@ -413,9 +413,9 @@ public class Main {
                         features.add(new Feature("Darkvison", "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Dwarf", "PHB"));
                         features.add(new Feature("Dwarven Resilience", "You have advantage on saving throws against poison, and you have resistance against poison damage.", "Dwarf", "PHB"));
                         skills.addskill(new Skill("poison damage resistance", 1,  "Dr"));
-                        skills.addskill(new Skill("handaxe", 1,  "sW"));
-                        skills.addskill(new Skill("light hammer", 1,  "sW"));
-                        skills.addskill(new Skill("warhammer", 1, "mW"));
+                        skills.addskill(new Skill("handaxes", 1,  "sW"));
+                        skills.addskill(new Skill("light hammers", 1,  "sW"));
+                        skills.addskill(new Skill("warhammers", 1, "mW"));
                         while (uInint < 1 || uInint > 3) {
                             System.out.println("As a dwarf you are proficient with one of the following of your choice: 1:smith's tools, 2:brewer's supplies, or 3:mason's tools");
                         }
