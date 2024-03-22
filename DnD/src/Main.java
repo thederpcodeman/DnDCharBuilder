@@ -396,6 +396,8 @@ public class Main {
         String race = "";
         String subrace = "";
         int speed = 0;
+        int height = 0;
+        int weight = 0;
         ArrayList<Feature> features = new ArrayList<>();
         Proficencies skills = new Proficencies();
         while (cycle) {
@@ -441,13 +443,41 @@ public class Main {
                             Wis += 1;
                             subrace = "Hill Dwarf";
                             features.add(new Feature("Dwarven Toughness", "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.", "Hill Dwarf", "PHB"));
-
+                            int uInint2 = 0;
+                            while (uInint2 < 1 || uInint2 > 2) {
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
+                            if (uInint2 == 1){
+                                System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                                height = scaa.nextInt();
+                                System.out.println("Enter weight in lbs:");
+                                weight = scaa.nextInt();
+                            }else if (uInint2 == 2){
+                                int mod = (int) (4 * Math.random()) + (int) (4 * Math.random()) + 2;
+                                height = 44 + mod;
+                                weight = 115 + (mod * ((int) (6 * Math.random()) + (int) (6 * Math.random()) + 2));
+                            }
                         }else if (uInint == 2){
                             Str += 2;
                             subrace = "Mountain Dwarf";
                             skills.addskill(new Skill("light armor", 1,  "A"));
                             skills.addskill(new Skill("medium armor", 1,  "A"));
-
+                            int uInint2 = 0;
+                            while (uInint2 < 1 || uInint2 > 2) {
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
+                            if (uInint2 == 1){
+                                System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                                height = scaa.nextInt();
+                                System.out.println("Enter weight in lbs:");
+                                weight = scaa.nextInt();
+                            }else if (uInint2 == 2){
+                                int mod = (int) (4 * Math.random()) + (int) (4 * Math.random()) + 2;
+                                height = 48 + mod;
+                                weight = 130 + (mod * ((int) (6 * Math.random()) + (int) (6 * Math.random()) + 2));
+                            }
                         }
                     }
                     break;
@@ -479,6 +509,21 @@ public class Main {
                             skills.addskill(new Skill("longbows", 1,  "mW"));
                             features.add(new Feature("Extra Language", "You can read, speak, and write one additional language of your choice.", "High Elf", "PHB"));
 
+                            int uInint2 = 0;
+                            while (uInint2 < 1 || uInint2 > 2) {
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
+                            if (uInint2 == 1){
+                                System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                                height = scaa.nextInt();
+                                System.out.println("Enter weight in lbs:");
+                                weight = scaa.nextInt();
+                            }else if (uInint2 == 2){
+                                int mod = (int) (10 * Math.random()) + (int) (10 * Math.random()) + 2;
+                                height = 54 + mod;
+                                weight = 90 + (mod * ((int) (4 * Math.random()) +1));
+                            }
                         }else if (uInint == 2){
                             Wis += 1;
                             subrace = "Wood Elf";
@@ -490,6 +535,21 @@ public class Main {
                             speed = 35;
                             features.add(new Feature("Mask of the Wild", "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.", "Wood Elf", "PHB"));
 
+                            int uInint2 = 0;
+                            while (uInint2 < 1 || uInint2 > 2) {
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
+                            if (uInint2 == 1){
+                                System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                                height = scaa.nextInt();
+                                System.out.println("Enter weight in lbs:");
+                                weight = scaa.nextInt();
+                            }else if (uInint2 == 2){
+                                int mod = (int) (10 * Math.random()) + (int) (10 * Math.random()) + 2;
+                                height = 54 + mod;
+                                weight = 100 + (mod * ((int) (4 * Math.random()) +1));
+                            }
                         }else if (uInint == 3){
                             Cha += 1;
                             subrace = "Dark Elf";
@@ -500,6 +560,21 @@ public class Main {
                             skills.addskill(new Skill("shortswords", 1,  "mW"));
                             skills.addskill(new Skill("hand crossbows", 1,  "mW"));
 
+                            int uInint2 = 0;
+                            while (uInint2 < 1 || uInint2 > 2) {
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
+                            if (uInint2 == 1){
+                                System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                                height = scaa.nextInt();
+                                System.out.println("Enter weight in lbs:");
+                                weight = scaa.nextInt();
+                            }else if (uInint2 == 2){
+                                int mod = (int) (6 * Math.random()) + (int) (6 * Math.random()) + 2;
+                                height = 53 + mod;
+                                weight = 75 + (mod * ((int) (6 * Math.random()) +1));
+                            }
                         }
                     }
                     break;
@@ -531,11 +606,27 @@ public class Main {
                             features.add(new Feature("Stout Resilience", "You have advantage on saving throws against poison, and you have resistance to poison damage.", "Stout Halfling", "PHB"));
                             skills.addskill(new Skill("poison damage resistance", 1,  "Dr"));
                         }
+
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1){
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        }else if (uInint2 == 2){
+                            int mod = (int) (4 * Math.random()) + (int) (4 * Math.random()) + 2;
+                            height = 31 + mod;
+                            weight = 35 + (mod);
+                        }
                     }
                     break;
                 case 4:
                     System.out.println("You have selected: Human\nThey gain +1 to all stats, or optionally, they gain +1 to 2 ability scores of your choice(WIP)\nAre you sure You would like to play a Halfling: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if (scaa.nextLine().toLowerCase().equals("y")) {
                         cycle = false;
                         race = "Human";
                         speed = 30;
@@ -546,7 +637,7 @@ public class Main {
                             System.out.println("Are you choosing Variant human 1:No, 2:Yes");
                             uInint = scaa.nextInt();
                         }
-                        if (uInint == 1){
+                        if (uInint == 1) {
                             Str += 1;
                             Dex += 1;
                             Con += 1;
@@ -555,12 +646,28 @@ public class Main {
                             Cha += 1;
                             subrace = "Standard Human";
 
-                        }else if (uInint == 2){
+                        } else if (uInint == 2) {
 
+                        }
+
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1) {
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        } else if (uInint2 == 2) {
+                            int mod = (int) (10 * Math.random()) + (int) (10 * Math.random()) + 2;
+                            height = 56 + mod;
+                            weight = 110 + (mod * ((int) (4 * Math.random()) + ((int) (4 * Math.random()) + 2)));
                         }
                     }
                     break;
-                case 5:
+                    case 5:
                     System.out.println("You have selected: Dragonborn\nShaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race. They gain a +2 to Str, and +1 to Cha, and have a breath weapon\nAre you sure You would like to play a Dragonborn: (y/n)");
                     if (scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
@@ -616,6 +723,22 @@ public class Main {
                             features.add(new Feature("Breath Weapon", " You can use your action to exhale destructive energy. It deals Cold damage in a 15' cone. When you use your breath weapon, all creatures in the area must make a Constitution saving throw. The DC of this saving throw is 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increase to 3d6 at 6th level, 4d6 at 11th, and 5d6 at 16th level. After using your breath weapon, you cannot use it again until you complete a short or long rest.", "White Dragonborn", "PHB"));
                             skills.addskill(new Skill("cold damage resistance", 1,  "Dr"));
                         }
+
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1) {
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        } else if (uInint2 == 2) {
+                            int mod = (int) (8 * Math.random()) + (int) (8 * Math.random()) + 2;
+                            height = 66 + mod;
+                            weight = 175 + (mod * ((int) (6 * Math.random()) + ((int) (6 * Math.random()) + 2)));
+                        }
                     }
                     break;
                 case 6:
@@ -651,6 +774,22 @@ public class Main {
                                     Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.
                                     Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.""", "Rock Gnome", "PHB"));
 
+                        }
+
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1) {
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        } else if (uInint2 == 2) {
+                            int mod = (int) (4 * Math.random()) + (int) (4 * Math.random()) + 2;
+                            height = 35 + mod;
+                            weight = 35 + (mod);
                         }
                     }
                     break;
@@ -724,6 +863,22 @@ public class Main {
                             Wis += 1;
                         }
 
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1) {
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        } else if (uInint2 == 2) {
+                            int mod = (int) (8 * Math.random()) + (int) (8 * Math.random()) + 2;
+                            height = 57 + mod;
+                            weight = 110 + (mod * ((int) (4 * Math.random()) + ((int) (4 * Math.random()) + 2)));
+                        }
+
 
                     }
                     break;
@@ -740,7 +895,25 @@ public class Main {
                         features.add(new Feature("Relentless Endurance", "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.", "Half-Orc", "PHB"));
                         features.add(new Feature("Savage Attacks", "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.", "Half-Orc", "PHB"));
                         features.add(new Feature("Languages", "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.", "Half-Orc", "PHB"));
+
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1) {
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        } else if (uInint2 == 2) {
+                            int mod = (int) (10 * Math.random()) + (int) (10 * Math.random()) + 2;
+                            height = 58 + mod;
+                            weight = 140 + (mod * ((int) (6 * Math.random()) + ((int) (6 * Math.random()) + 2)));
+                        }
                     }
+
+
                     break;
                 case 9:
                     System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
@@ -754,6 +927,22 @@ public class Main {
                         skills.addskill(new Skill("fire damage resistance", 1, "Dr"));
                         features.add(new Feature("Infernal Legacy", "ou know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.", "Tiefling", "PHB"));
                         features.add(new Feature("Languages", "You can speak, read, and write Common and Infernal.", "Tiefling", "PHB"));
+
+                        int uInint2 = 0;
+                        while (uInint2 < 1 || uInint2 > 2) {
+                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                            uInint2 = scaa.nextInt();
+                        }
+                        if (uInint2 == 1) {
+                            System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
+                            height = scaa.nextInt();
+                            System.out.println("Enter weight in lbs:");
+                            weight = scaa.nextInt();
+                        } else if (uInint2 == 2) {
+                            int mod = (int) (8 * Math.random()) + (int) (8 * Math.random()) + 2;
+                            height = 57 + mod;
+                            weight = 110 + (mod * ((int) (4 * Math.random()) + ((int) (4 * Math.random()) + 2)));
+                        }
                     }
                     break;
 
