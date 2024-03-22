@@ -952,7 +952,7 @@ public class Main {
             }
         }
 
-        System.out.println("Race:" + race + "\nSubrace:" + subrace + "Str, Dex, Con, Int, Wis, Cha:" + Str + " " + Dex + " " + Con + ", " + Int + " " + Wis + " " + Cha + "\n Height: " + height / 12 + "ft " + height % 12 + "in" );
+        System.out.println("Race:" + race + "\nSubrace:" + subrace + "Str, Dex, Con, Int, Wis, Cha:" + Str + " " + Dex + " " + Con + ", " + Int + " " + Wis + " " + Cha + "\n Height: " + height / 12 + "ft " + height % 12 + "in\nWeight: " + weight );
 
 
 
