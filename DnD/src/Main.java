@@ -727,6 +727,38 @@ public class Main {
 
                     }
                     break;
+                case 8:
+                    System.out.println("You have selected: Half-Orc\nHalf-Orcs are half orc, half human, and display a mix of the traits of both. They gain a +2 to Str, and +1 to Con, and have savage attacks and relentless endurance\nAre you sure You would like to play a Half-Orc: (y/n)");
+                    if (scaa.nextLine().equalsIgnoreCase("y")) {
+                        cycle = false;
+                        race = "Half-Orc";
+                        speed = 30;
+                        Str += 2;
+                        Con += 1;
+                        features.add(new Feature("Darkvision", "Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Half-Orc", "PHB"));
+                        skills.addskill(new Skill("intimidation", 1, "Sk"));
+                        features.add(new Feature("Relentless Endurance", "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.", "Half-Orc", "PHB"));
+                        features.add(new Feature("Savage Attacks", "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.", "Half-Orc", "PHB"));
+                        features.add(new Feature("Languages", "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.", "Half-Orc", "PHB"));
+                    }
+                    break;
+                case 9:
+                    System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                    if (scaa.nextLine().equalsIgnoreCase("y")) {
+                        cycle = false;
+                        race = "Tiefling";
+                        speed = 30;
+                        Cha += 2;
+                        Int += 1;
+                        features.add(new Feature("Darkvision", "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.", "Tiefling", "PHB"));
+                        skills.addskill(new Skill("fire damage resistance", 1, "Dr"));
+                        features.add(new Feature("Infernal Legacy", "ou know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.", "Tiefling", "PHB"));
+                        features.add(new Feature("Languages", "You can speak, read, and write Common and Infernal.", "Tiefling", "PHB"));
+                    }
+                    break;
+
+
+
 
             }
         }
