@@ -562,7 +562,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("You have selected: Dragonborn\nShaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race. They gain a +2 to Str, and +1 to Cha, and have a breath weapon\nAre you sure You would like to play a Dragonborn: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if (scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
                         race = "Dragonborn";
                         speed = 30;
@@ -620,7 +620,7 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("You have selected: Gnome\nGnomes are small and inventive humanoids, gnomes are known for their close-night communities, and love of invention and life. They gain a +2 to Int, and a subclass (+1)\nAre you sure You would like to play a Halfling: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if (scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
                         race = "Gnome";
                         speed = 25;
@@ -643,16 +643,19 @@ public class Main {
                             Con += 1;
                             subrace = "Rock Gnome";
                             features.add(new Feature("Artificer's Lore", "Whenever you make an Intelligence (History) check related to magical, alchemical, or technological items, you can add twice your proficiency bonus instead of any other proficiency bonus that may apply.", "Rock Gnome", "PHB"));
-                            features.add(new Feature("Tinker", "You have proficiency with artisan tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp).\nThe device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.\nWhen you create a device, choose one of the following options:\n" +
-                                    "Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\n" +
-                                    "Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\n" +
-                                    "Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.", "Rock Gnome", "PHB"));
+                            features.add(new Feature("Tinker", """
+                                    You have proficiency with artisan tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp).
+                                    The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time.
+                                    When you create a device, choose one of the following options:
+                                    Clockwork Toy. This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.
+                                    Fire Starter. The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.
+                                    Music Box. When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.""", "Rock Gnome", "PHB"));
 
                         }
                     }
                     break;
                     case 7:
-                    System.out.println("You have selected: Half-Elf\nHalf-Elves are half elf, half human, and display a mix of the traits of both. They gain a +2 to Cha, and +1 to 2 other stats\nAre you sure You would like to play a Halfling: (y/n)");
+                    System.out.println("You have selected: Half-Elf\nHalf-Elves are half elf, half human, and display a mix of the traits of both. They gain a +2 to Cha, and +1 to 2 other stats\nAre you sure You would like to play a Half-Elf: (y/n)");
                     if (scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Half-Elf";
@@ -661,13 +664,65 @@ public class Main {
                         features.add(new Feature("Darkvision", "Thanks to your elven heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Half-Elf", "PHB"));
                         features.add(new Feature("Fey Ancestry", "You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Half-Elf", "PHB"));
                         features.add(new Feature("Languages", "You can read, speak, and write Common, Elven, and one language of your choice.", "Half-Elf", "PHB"));
-
-                        while (uInint < 1 || uInint > 2) {
-                            System.out.println("As a Half-Elf elf, you have the Half-Elf versatility feature, and must choose one of the following abilities based off of your Elven heritage:\n1:Skill Versatility (General), 2:Elf Weapon Training (High or Wood Elf Heritage), 3: , 4: , 5: , 6:");
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 7) {
+                            System.out.println("As a Half-Elf elf, you have the Half-Elf versatility feature, and must choose one of the following abilities based off of your Elven heritage:\n1:Skill Versatility (General), 2:Elf Weapon Training (High or Wood Elf Heritage), 3:Cantrip (High Elf Heritage), 4:Fleet of Foot (Wood Elf Heritage), 5:Mask of the Wild (Wood Elf Heritage), 6:Drow Magic (Dark Elf Heritage), 7:Swim Speed (Aquatic Elf Heritage)");
                             uInint = scaa.nextInt();
                         }
-                        features.add(new Feature("Languages", "You can read, speak, and write Common, Elven, and one language of your choice.", "Half-Elf", "PHB"));
-
+                        if (uInint == 1){
+                            features.add(new Feature("Skill Versatility", "", "Half-Elf", "PHB"));
+                        }else if (uInint == 2){
+                            skills.addskill(new Skill("longswords", 1,  "mW"));
+                            skills.addskill(new Skill("shortswords", 1,  "mW"));
+                            skills.addskill(new Skill("shortbows", 1,  "sW"));
+                            skills.addskill(new Skill("longbows", 1,  "mW"));
+                        }else if (uInint == 3){
+                            features.add(new Feature("Cantrip", "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.", "Half-Elf", "PHB"));
+                        }else if (uInint == 4){
+                            speed = 35;
+                        }else if (uInint == 5){
+                            features.add(new Feature("Mask of the Wild", "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.", "Half-Elf", "PHB"));
+                        }else if (uInint == 6){
+                            features.add(new Feature("Drow Magic", "You know the Dancing Lights cantrip. When you reach 3rd level, you can cast Faerie Fire once, and it recharges after a long rest. When you reach 5th level, you can cast Darkness once, and it recharges after a long rest. Charisma is your spellcasting ability for these spells.", "Half-Elf", "PHB"));
+                        }else if (uInint == 7){
+                            features.add(new Feature("Swim Speed", "You have a swimming speed of 30 feet.", "Half-Elf", "PHB"));
+                        }
+                        uInint = 0;
+                        while (uInint < 1 || uInint > 10) {
+                            System.out.println("As a Half-Elf elf, you gain +1 in two Ability scores other than Charisma, which two would you like:\n1: Str/Dex, 2:Str/Con\n3:Str/Int, 4:Str/Wis\n5:Dex/Con, 6:Dex/Int\n7:Dex/Wis, 8:Con/Int\n9:Con/Wis, 10:Int/Wis");
+                            uInint = scaa.nextInt();
+                        }
+                        if (uInint == 1){
+                            Str += 1;
+                            Dex += 1;
+                        }else if (uInint == 2){
+                            Str += 1;
+                            Con += 1;
+                        }else if (uInint == 3){
+                            Str += 1;
+                            Int += 1;
+                        }else if (uInint == 4){
+                            Str += 1;
+                            Wis += 1;
+                        }else if (uInint == 5){
+                            Con += 1;
+                            Dex += 1;
+                        }else if (uInint == 6){
+                            Int += 1;
+                            Dex += 1;
+                        }else if (uInint == 7){
+                            Wis += 1;
+                            Dex += 1;
+                        }else if (uInint == 8){
+                            Con += 1;
+                            Int += 1;
+                        }else if (uInint == 9){
+                            Con += 1;
+                            Wis += 1;
+                        }else if (uInint == 10){
+                            Int += 1;
+                            Wis += 1;
+                        }
 
 
                     }
