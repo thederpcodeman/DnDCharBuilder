@@ -952,8 +952,10 @@ public class Main {
             }
         }
 
+        System.out.println("Race:" + race + "\nSubrace:" + subrace + "Str, Dex, Con, Int, Wis, Cha:" + Str + " " + Dex + " " + Con + ", " + Int + " " + Wis + " " + Cha + "\n Height: " + height / 12 + "ft " + height % 12 + "in" );
 
-        scaa.nextInt();
+
+
         System.out.println();
         System.out.println("Step 4: Class");
         System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
