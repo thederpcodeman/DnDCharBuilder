@@ -433,8 +433,8 @@ public class Main {
 
                         }
                         features.add(new Feature("Stonecunning", "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.", "Dwarf", "PHB"));
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak", "Dwarf", "PHB"));
-                        uInint = 0;
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Dwarfish", 1,  "L"));uInint = 0;
                         while (uInint < 1 || uInint > 2) {
                             System.out.println("Their are 2 subraces of dwarf:\nThe keen hill dwarves, who gain +1 wisdom and to their HP\nThe strong mountain dwarves, who gain +2 strength, and proficiency in light and medium armor\nWhat would you like to be 1:Hill Dwarf, 2:Mountain dwarf");
                             uInint = scaa.nextInt();
@@ -492,7 +492,8 @@ public class Main {
                         features.add(new Feature("Fey Ancestry", "You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Elf", "PHB"));
                         features.add(new Feature("Trance", "Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day. The Common word for this meditation is \"trance.\" While meditating, you dream after a fashion; such dreams are actually mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same benefit a human would from 8 hours of sleep.", "Elf", "PHB"));
                         skills.addskill(new Skill("perception", 1,  "Sk"));
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and Elven.", "Elf", "PHB"));
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Elven", 1,  "L"));uInint = 0;
 
                         uInint = 0;
                         while (uInint < 1 || uInint > 3) {
@@ -507,7 +508,7 @@ public class Main {
                             skills.addskill(new Skill("shortswords", 1,  "mW"));
                             skills.addskill(new Skill("shortbows", 1,  "sW"));
                             skills.addskill(new Skill("longbows", 1,  "mW"));
-                            features.add(new Feature("Extra Language", "You can read, speak, and write one additional language of your choice.", "High Elf", "PHB"));
+                            skills.addskill(new Skill("Any Language", 1,  "L"));uInint = 0;
 
                             int uInint2 = 0;
                             while (uInint2 < 1 || uInint2 > 2) {
@@ -588,8 +589,8 @@ public class Main {
                         features.add(new Feature("Lucky", "When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die. You must use the new result, even if it is a 1.", "Halfling", "PHB"));
                         features.add(new Feature("Brave", "You have advantage on saving throws against being frightened.", "Halfling", "PHB"));
                         features.add(new Feature("Nimble", "You can move through the space of any creature that is of a size larger than yours.", "Halfling", "PHB"));
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and Halfling.", "Halfling", "PHB"));
-
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Halfling", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 2) {
                             System.out.println("Their are 2 subraces of halfling:\nThe lightfoot halflings, who gain +1 charisma and can hide more easily\nThe stout halflings, who gain +1 constitution, and resistance to poison\nWhat would you like to be 1:Lightfoot, 2:Stout");
@@ -630,8 +631,8 @@ public class Main {
                         cycle = false;
                         race = "Human";
                         speed = 30;
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.", "Human", "PHB"));
-
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Any Language", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 1) {
                             System.out.println("Are you choosing Variant human 1:No, 2:Yes");
@@ -675,8 +676,8 @@ public class Main {
                         speed = 30;
                         Str += 2;
                         Cha += 1;
-                        features.add(new Feature("Languages", "You can read, speak, and write Common and Draconic.", "Dragonborn", "PHB"));
-
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Draconic", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 10) {
                             System.out.println("Their are many types of dragon, and as such many types of Dragonborn, you must choose one from which you inherit:\n1:Black, 2:Blue, 3:Brass, 4:Bronze, 5:Copper, 6:Gold, 7:Green, 8:Red, 9:Silver, 10:White");
@@ -750,8 +751,8 @@ public class Main {
                         Int += 2;
                         features.add(new Feature("Darkvision", "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Gnome", "PHB"));
                         features.add(new Feature("Gnome Cunning", "You have advantage on all Intelligence, Wisdom, and Charisma saves against magic.", "Gnome", "PHB"));
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and Gnomish.", "Gnome", "PHB"));
-
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Gnomish", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 2) {
                             System.out.println("Their are 2 subraces of Gnome:\nForest Gnomes, who gain +1 Dex, can talk to small animals and create small illusions\nRock Gnomes, who gain +1 Con, and passing knowledge of artificey\nWhat would you like to be 1:Forest Gnome, 2:Rock Gnome");
@@ -802,8 +803,9 @@ public class Main {
                         Cha += 2;
                         features.add(new Feature("Darkvision", "Thanks to your elven heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Half-Elf", "PHB"));
                         features.add(new Feature("Fey Ancestry", "You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Half-Elf", "PHB"));
-                        features.add(new Feature("Languages", "You can read, speak, and write Common, Elven, and one language of your choice.", "Half-Elf", "PHB"));
-                        uInint = 0;
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Elven", 1,  "L"));uInint = 0;uInint = 0;
+                        skills.addskill(new Skill("Any Language", 1,  "L"));uInint = 0;
                         while (uInint < 1 || uInint > 7) {
                             System.out.println("As a Half-Elf elf, you have the Half-Elf versatility feature, and must choose one of the following abilities based off of your Elven heritage:\n1:Skill Versatility (General), 2:Elf Weapon Training (High or Wood Elf Heritage), 3:Cantrip (High Elf Heritage), 4:Fleet of Foot (Wood Elf Heritage), 5:Mask of the Wild (Wood Elf Heritage), 6:Drow Magic (Dark Elf Heritage), 7:Swim Speed (Aquatic Elf Heritage)");
                             uInint = scaa.nextInt();
@@ -894,8 +896,8 @@ public class Main {
                         skills.addskill(new Skill("intimidation", 1, "Sk"));
                         features.add(new Feature("Relentless Endurance", "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.", "Half-Orc", "PHB"));
                         features.add(new Feature("Savage Attacks", "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.", "Half-Orc", "PHB"));
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.", "Half-Orc", "PHB"));
-
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Orc", 1,  "L"));uInint = 0;
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
                             System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
@@ -926,8 +928,8 @@ public class Main {
                         features.add(new Feature("Darkvision", "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.", "Tiefling", "PHB"));
                         skills.addskill(new Skill("fire damage resistance", 1, "Dr"));
                         features.add(new Feature("Infernal Legacy", "ou know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.", "Tiefling", "PHB"));
-                        features.add(new Feature("Languages", "You can speak, read, and write Common and Infernal.", "Tiefling", "PHB"));
-
+                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Infernal", 1,  "L"));uInint = 0;
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
                             System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
@@ -961,6 +963,10 @@ public class Main {
         System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
         System.out.println("(1:");
 
+
+        System.out.println();
+        System.out.println("Step 5: Backround");
+        System.out.println("Your characters backround represents who they were before they became an adventurer, it has some limited, annd mostly flavorful mechanical impacts.");
 
     }
 
