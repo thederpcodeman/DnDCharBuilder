@@ -14,6 +14,16 @@ public class Proficencies {
         if (n.type.equalsIgnoreCase("l")){
             totalLangs += 1;
         }
+        if (n.name.equalsIgnoreCase("Any Language")){ // Extra language stacking
+            for (Skill i : list){
+                if (i.name.equalsIgnoreCase(n.name)){
+                    i.level += n.level;
+                    return;
+                }
+            }
+            list.add(n);
+            return;
+        }
 
         if (n.level <= getskill(n.name.toLowerCase())){
                 return;
