@@ -398,6 +398,7 @@ public class Main {
         int speed = 0;
         int height = 0;
         int weight = 0;
+        int baseHP = 0;
         ArrayList<Feature> features = new ArrayList<>();
         Proficencies skills = new Proficencies();
         while (cycle) {
@@ -928,8 +929,8 @@ public class Main {
                         features.add(new Feature("Darkvision", "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.", "Tiefling", "PHB"));
                         skills.addskill(new Skill("fire damage resistance", 1, "Dr"));
                         features.add(new Feature("Infernal Legacy", "ou know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.", "Tiefling", "PHB"));
-                        skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
-                        skills.addskill(new Skill("Infernal", 1,  "L"));uInint = 0;
+                        skills.addskill(new Skill("Common", 1,  "L"));
+                        skills.addskill(new Skill("Infernal", 1,  "L"));
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
                             System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
@@ -954,14 +955,126 @@ public class Main {
             }
         }
 
-        System.out.println("Race:" + race + "\nSubrace:" + subrace + "Str, Dex, Con, Int, Wis, Cha:" + Str + " " + Dex + " " + Con + ", " + Int + " " + Wis + " " + Cha + "\n Height: " + height / 12 + "ft " + height % 12 + "in\nWeight: " + weight );
+        System.out.println("Race:" + race + "\nSubrace:" + subrace + "\nStr, Dex, Con, Int, Wis, Cha:" + Str + " " + Dex + " " + Con + ", " + Int + " " + Wis + " " + Cha + "\n Height: " + height / 12 + "ft " + height % 12 + "in\nWeight: " + weight );
 
 
 
         System.out.println();
         System.out.println("Step 4: Class");
         System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
-        System.out.println("(1:");
+        System.out.println("(1: Barbarian, 2:Bard, 3:Cleric, 4:Druid, 5:Fighter, 6:Monk, 7:Paladin, 8:Ranger, 9:Rogue, 10:Sorcerer, 11:Warlock, 12:Wizard");
+        uInint = scaa.nextInt();
+        scaa.nextLine();
+        String cCl = "";
+        ArrayList<Integer> hitDie = new ArrayList<>();
+        switch(uInint){
+            case 1:
+                System.out.println("You have selected: Barbarian\n Barbarians are powerful warriors that use their brute strength and reckless anger to destroy foes, most barbarians are tanky melee fighters.\nAre you sure you would like to be a barbarian (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    cCl = "Barbarian";
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Medium Armor", 1,  "A"));
+                    skills.addskill(new Skill("Shields", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
+                    skills.addskill(new Skill("Strength", 1,  "St"));
+                    skills.addskill(new Skill("Constitution", 1,  "St"));
+                    //choose 2
+                    baseHP += 12;
+                    hitDie.add(12);
+                    features.add(new Feature("Rage", "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.\nWhile raging, you gain the following benefits if you aren't wearing heavy armor:\n\tYou have advantage on Strength checks and Strength saving throws.\n\tWhen you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.\n\tYou have resistance to bludgeoning, piercing, and slashing damage.\nIf you are able to cast spells, you can't cast them or concentrate on them while raging.\nIf you are able to cast spells, you can't cast them or concentrate on them while raging\nYour rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.\nOnce you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.", "Barbarian", "PHB"));
+                    features.add(new Feature("Unarmored Defence", "While you are not wearing any armor, your armor class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.", "Barbarian", "PHB"));
+
+                }
+                break;
+            case 2:
+                System.out.println("You have selected: Bard\nBards are trained performers, musicians, and artists who channel magic through their art\nWould you like to be a bard: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    cCl = "Bard";
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Hand Crossbows", 1,  "mW"));
+                    skills.addskill(new Skill("Longswords", 1,  "mW"));
+                    skills.addskill(new Skill("Rapiers", 1,  "mW"));
+                    skills.addskill(new Skill("Shortswords", 1,  "mW"));
+                    skills.addskill(new Skill("Dexterity", 1,  "St"));
+                    skills.addskill(new Skill("Charisma", 1,  "St"));
+                    //choose 3
+                    baseHP += 8;
+                    hitDie.add(8);
+                    features.add(new Feature("Spellcasting", "[WIP]", "Bard", "PHB"));
+                    features.add(new Feature("Bardic Inspiration", "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.\n" +
+                            "\n" +
+                            "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.\n" +
+                            "\n" +
+                            "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.\n" +
+                            "\n" +
+                            "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level.", "Bard", "PHB"));
+
+                }
+                break;
+            case 3:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 4:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 5:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 6:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 7:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 8:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 9:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 10:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 11:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+            case 12:
+                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                if (scaa.nextLine().equalsIgnoreCase("y")) {
+
+                }
+                break;
+        }
+
 
 
         System.out.println();
