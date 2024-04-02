@@ -1014,21 +1014,66 @@ public class Main {
                 }
                 break;
             case 3:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Cleric\nClerics are divine spellcasters, and often healers, but can happily fill nearly any roll in the party\nAre you sure You would like to play a Cleric: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
-
+                    cCl = "Cleric";
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Medium Armor", 1,  "A"));
+                    skills.addskill(new Skill("Shields", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Wisdom", 1,  "St"));
+                    skills.addskill(new Skill("Charisma", 1,  "St"));
+                    //choose 2
+                    baseHP += 8;
+                    hitDie.add(8);
+                    features.add(new Feature("Spellcasting", "[WIP]", "Cleric", "PHB"));
+                    //Subclass
                 }
                 break;
             case 4:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Druid\nDruids commune with and harness the forces of nature in their magic, and strive to protect the natural order, they will not wear metal.\nAre you sure You would like to play a Druid: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    cCl = "Druid";
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Medium Armor", 1,  "A"));
+                    skills.addskill(new Skill("Shields", 1,  "A"));
+                    skills.addskill(new Skill("Clubs", 1,  "sW"));
+                    skills.addskill(new Skill("Daggers", 1,  "sW"));
+                    skills.addskill(new Skill("Darts", 1,  "sW"));
+                    skills.addskill(new Skill("Javelins", 1,  "sW"));
+                    skills.addskill(new Skill("Maces", 1,  "sW"));
+                    skills.addskill(new Skill("Quaterstaffs", 1,  "sW"));
+                    skills.addskill(new Skill("Scimitars", 1,  "mW"));
+                    skills.addskill(new Skill("Sickles", 1,  "sW"));
+                    skills.addskill(new Skill("Slings", 1,  "sW"));
+                    skills.addskill(new Skill("Spears", 1,  "sW"));
+                    skills.addskill(new Skill("Herbalism Kit", 1,  "t"));
+                    skills.addskill(new Skill("Wisdom", 1,  "St"));
+                    skills.addskill(new Skill("Intelligence", 1,  "St"));
+                    //choose 2
+                    baseHP += 8;
+                    hitDie.add(8);
+                    features.add(new Feature("Druidic", "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.", "Druid", "PHB"));
+                    features.add(new Feature("Spellcasting", "[WIP]", "Druid", "PHB"));
 
                 }
                 break;
             case 5:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Fighter\nFighters are the masters of martial weapons, trained to perfection in their weapon of choice, and usually every other weapon\nAre you sure you want to play a fighter: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
-
+                    skills.addskill(new Skill("All Armor", 1,  "A"));
+                    skills.addskill(new Skill("Shields", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
+                    skills.addskill(new Skill("Strength", 1,  "St"));
+                    skills.addskill(new Skill("Constitution", 1,  "St"));
+                    //choose 2
+                    baseHP += 10;
+                    hitDie.add(10);
+                    features.add(new Feature("Second Wind", "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.\n" +
+                            "\n" +
+                            "Once you use this feature, you must finish a short or long rest before you can use it again.", "Fighter", "PHB"));
+                    //Fighting Style
                 }
                 break;
             case 6:
