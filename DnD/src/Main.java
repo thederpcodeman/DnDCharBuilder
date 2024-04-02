@@ -962,7 +962,7 @@ public class Main {
         System.out.println();
         System.out.println("Step 4: Class");
         System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
-        System.out.println("(1: Barbarian, 2:Bard, 3:Cleric, 4:Druid, 5:Fighter, 6:Monk, 7:Paladin, 8:Ranger, 9:Rogue, 10:Sorcerer, 11:Warlock, 12:Wizard");
+        System.out.println("1:Barbarian, 2:Bard, 3:Cleric, 4:Druid\n5:Fighter, 6:Monk, 7:Paladin, 8:Ranger\n9:Rogue, 10:Sorcerer, 11:Warlock, 12:Wizard");
         uInint = scaa.nextInt();
         scaa.nextLine();
         String cCl = "";
@@ -1077,8 +1077,25 @@ public class Main {
                 }
                 break;
             case 6:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Monk\nMonks live together in secluded monasteries, scattered throuout the countryside, these monks live and train together, and many of them, train in combat.\nMost monks never use this ability, but some leave their monestaries and become adventurers.\nThey are masters of their own bodies, are you sure you want to play a Monk: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Shortswords", 1,  "mW"));
+                    //choose 1 tool
+                    skills.addskill(new Skill("Strength", 1,  "St"));
+                    skills.addskill(new Skill("Dexterity", 1,  "St"));
+                    //choose 2
+                    baseHP += 8;
+                    hitDie.add(8);
+                    features.add(new Feature("Unarmored Defence", "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.", "Monk", "PHB"));
+                    features.add(new Feature("Martial Arts", "At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property.\n" +
+                            "\n" +
+                            "You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield:\n" +
+                            "\n" +
+                            "You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.\n" +
+                            "You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.\n" +
+                            "When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.\n" +
+                            "Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon on the Weapons page.", "Monk", "PHB"));
 
                 }
                 break;
