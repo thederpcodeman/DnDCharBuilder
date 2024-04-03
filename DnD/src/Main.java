@@ -1201,8 +1201,29 @@ public class Main {
                 }
                 break;
             case 9:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Rogue\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Longswords", 1,  "mW"));
+                    skills.addskill(new Skill("Rapiers", 1,  "mW"));
+                    skills.addskill(new Skill("Shortswords", 1,  "mW"));
+                    skills.addskill(new Skill("Hand Crossbows", 1,  "mW"));
+                    skills.addskill(new Skill("Theves Tool's", 1,  "t"));
+                    skills.addskill(new Skill("Dexterity", 1,  "St"));
+                    skills.addskill(new Skill("Intelligence", 1,  "St"));
+                    //choose 2
+                    baseHP += 10;
+                    hitDie.add(10);
+                    features.add(new Feature("Sneak Attack","Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.\n" +
+                            "\n" +
+                            "You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll.\n" +
+                            "\n" +
+                            "The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.","Rogue","PHB"));
+                    features.add(new Feature("Thieves' Cant ","During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.\n" +
+                            "\n" +
+                            "In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.","Rogue","PHB"));
+                    //Choose 2 lv 2
 
                 }
                 break;
