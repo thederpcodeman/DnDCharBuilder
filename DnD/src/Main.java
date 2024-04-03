@@ -1228,20 +1228,53 @@ public class Main {
                 }
                 break;
             case 10:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Sorcerer\nSorcerers are people who gained magic, not through rigorous study, or through a deal or dealing with a higher power, but essentially at random\nAre you sure You would like to play a Sorcerer: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
-
+                    skills.addskill(new Skill("Daggers", 1,  "sW"));
+                    skills.addskill(new Skill("Darts", 1,  "sW"));
+                    skills.addskill(new Skill("Slings", 1,  "sW"));
+                    skills.addskill(new Skill("Quarterstaffs", 1,  "sW"));
+                    skills.addskill(new Skill("Light Crossbows", 1,  "sW"));
+                    skills.addskill(new Skill("Constitution", 1,  "St"));
+                    skills.addskill(new Skill("Charisma", 1,  "St"));
+                    //Choose 2
+                    baseHP += 6;
+                    hitDie.add(6);
+                    features.add(new Feature("Spellcasting", "[WIP]", "Sorcerer", "PHB"));
+                    //Subclass
                 }
                 break;
             case 11:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Warlock\nWarlocks are spellcasters that derive their power from a deal with a powerful entity\nAre you sure You would like to play a Warlock: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
-
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Wisdom", 1,  "St"));
+                    skills.addskill(new Skill("Charisma", 1,  "St"));
+                    //choose 2
+                    baseHP += 8;
+                    hitDie.add(8);
+                    features.add(new Feature("Pact Magic", "[WIP]", "Warlock", "PHB"));
+                    //subclass
                 }
                 break;
             case 12:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Wizard\nWizards are scholars of magic, who use their knowledge of the weave of magic to harness arcane power\nAre you sure You would like to play a Tiefling: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    skills.addskill(new Skill("Daggers", 1,  "sW"));
+                    skills.addskill(new Skill("Darts", 1,  "sW"));
+                    skills.addskill(new Skill("Slings", 1,  "sW"));
+                    skills.addskill(new Skill("Quarterstaffs", 1,  "sW"));
+                    skills.addskill(new Skill("Light Crossbows", 1,  "sW"));
+                    skills.addskill(new Skill("Wisdom", 1,  "St"));
+                    skills.addskill(new Skill("Intelligence", 1,  "St"));
+                    //choose 2
+                    baseHP += 6;
+                    hitDie.add(6);
+                    features.add(new Feature("Spellcasting", "[WIP]", "Wizard", "PHB"));
+                    features.add(new Feature("Arcane Recovery", "You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.\n" +
+                            "\n" +
+                            "For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.", "Wizard", "PHB"));
 
                 }
                 break;
