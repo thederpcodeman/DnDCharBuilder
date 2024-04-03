@@ -1100,14 +1100,103 @@ public class Main {
                 }
                 break;
             case 7:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Paladin\nPaladins are oath-swarn champions, often acting in sevice of a higher power, these knights use both their own might and the power of their oaths\nwould you like to play a paladin: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
-
+                    skills.addskill(new Skill("All Armor", 1,  "A"));
+                    skills.addskill(new Skill("Shields", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
+                    skills.addskill(new Skill("Wisdom", 1,  "St"));
+                    skills.addskill(new Skill("Charisma", 1,  "St"));
+                    //choose 2
+                    baseHP += 10;
+                    hitDie.add(10);
+                    features.add(new Feature("Divine Sense", "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the Hallow spell.\n" +
+                            "\n" +
+                            "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.", "Paladin", "PHB"));
+                    features.add(new Feature("Lay On Hands", "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5.\n" +
+                            "\n" +
+                            "As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.\n" +
+                            "\n" +
+                            "Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.\n" +
+                            "\n" +
+                            "This feature has no effect on undead and constructs.", "Paladin", "PHB"));
                 }
                 break;
             case 8:
-                System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Ranger\nAre you sure You would like to play a Ranger: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    skills.addskill(new Skill("Light Armor", 1,  "A"));
+                    skills.addskill(new Skill("Medium Armor", 1,  "A"));
+                    skills.addskill(new Skill("Shields", 1,  "A"));
+                    skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
+                    skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
+                    skills.addskill(new Skill("Strength", 1,  "St"));
+                    skills.addskill(new Skill("Dexterity", 1,  "St"));
+                    //choose 2
+                    baseHP += 10;
+                    hitDie.add(10);
+                    uInint = 0;
+                    while (uInint < 1 || uInint > 2) {
+                        System.out.println("As a Ranger you must choose between the Favored Enemy or Favored Foe features. 1:Favored Enemy, 2:Favored Foe");
+                        uInint = scaa.nextInt();
+                    }
+                    if (uInint == 1){
+                        features.add(new Feature("Favored Enemy","Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.\n" +
+                                "\n" +
+                                "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.\n" +
+                                "\n" +
+                                "You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.\n" +
+                                "\n" +
+                                "When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.\n" +
+                                "\n" +
+                                "You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.","Ranger","PHB"));
+                    }else if (uInint == 2){
+                        features.add(new Feature("Favored Foe","This 1st-level feature replaces the Favored Enemy feature and works with the Foe Slayer feature. You gain no benefit from the replaced feature and don't qualify for anything in the game that requires it.\n" +
+                                "\n" +
+                                "When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).\n" +
+                                "\n" +
+                                "The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you increase that damage by 1d4.\n" +
+                                "\n" +
+                                "You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\n" +
+                                "\n" +
+                                "This feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level.","Ranger","PHB"));
+                    }
+                    uInint = 0;
+                    while (uInint < 1 || uInint > 2) {
+                        System.out.println("As a Ranger you must choose between the Natural Explorer or Deft Explorer features. 1:Natural Explorer, 2:Deft Explorer");
+                        uInint = scaa.nextInt();
+                    }
+                    if (uInint == 1){
+                        features.add(new Feature("Natural Explorer","Also at 1st level, you are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.\n" +
+                                "\n" +
+                                "While traveling for an hour or more in your favored terrain, you gain the following benefits:\n" +
+                                "\n" +
+                                "Difficult terrain doesn’t slow your group’s travel.\n" +
+                                "Your group can’t become lost except by magical means.\n" +
+                                "Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.\n" +
+                                "If you are traveling alone, you can move stealthily at a normal pace.\n" +
+                                "When you forage, you find twice as much food as you normally would.\n" +
+                                "While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.\n" +
+                                "You choose additional favored terrain types at 6th and 10th level.","Ranger","PHB"));
+                    }else if (uInint == 2){
+                        features.add(new Feature("Deft Explorer","This 1st-level feature replaces the Natural Explorer feature. You gain no benefit from the replaced feature and don't qualify for anything in the game that requires it.\n" +
+                                "\n" +
+                                "You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit when you reach 6th level and 10th level in this class.\n" +
+                                "\n" +
+                                "Canny (1st Level)\n" +
+                                "Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make using the chosen skill.\n" +
+                                "\n" +
+                                "You can also speak, read, and write 2 additional languages of your choice.\n" +
+                                "\n" +
+                                "Roving (6th Level)\n" +
+                                "Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.\n" +
+                                "\n" +
+                                "Tireless (10th Level)\n" +
+                                "As an action, you can give yourself a number of temporary hit points equal to 1d8 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.\n" +
+                                "\n" +
+                                "In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.","Ranger","PHB"));
+                    }
 
                 }
                 break;
