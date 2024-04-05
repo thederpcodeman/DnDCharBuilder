@@ -979,7 +979,19 @@ public class Main {
                     skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
                     skills.addskill(new Skill("Strength", 1,  "St"));
                     skills.addskill(new Skill("Constitution", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Animal Handling", 1, "Sk"));
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Nature", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("Survival", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 12;
                     hitDie.add(12);
                     features.add(new Feature("Rage", "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.\nWhile raging, you gain the following benefits if you aren't wearing heavy armor:\n\tYou have advantage on Strength checks and Strength saving throws.\n\tWhen you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.\n\tYou have resistance to bludgeoning, piercing, and slashing damage.\nIf you are able to cast spells, you can't cast them or concentrate on them while raging.\nIf you are able to cast spells, you can't cast them or concentrate on them while raging\nYour rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.\nOnce you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.", "Barbarian", "PHB"));
@@ -999,7 +1011,33 @@ public class Main {
                     skills.addskill(new Skill("Shortswords", 1,  "mW"));
                     skills.addskill(new Skill("Dexterity", 1,  "St"));
                     skills.addskill(new Skill("Charisma", 1,  "St"));
-                    //choose 3
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Acrobatics", 1, "Sk"));
+                    Sks.add(new Skill("Animal Handling", 1, "Sk"));
+                    Sks.add(new Skill("Arcana", 1, "Sk"));
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Deception", 1, "Sk"));
+                    Sks.add(new Skill("History", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Investigation", 1, "Sk"));
+                    Sks.add(new Skill("Medicine", 1, "Sk"));
+                    Sks.add(new Skill("Nature", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("Performance", 1, "Sk"));
+                    Sks.add(new Skill("Persuasion", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    Sks.add(new Skill("Slight of Hand", 1, "Sk"));
+                    Sks.add(new Skill("Stealth", 1, "Sk"));
+                    Sks.add(new Skill("Survival", 1, "Sk"));
+                    System.out.println("Choose 3 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+                    System.out.println("Last skill");
+                    listSkill(Sks, skills); //Third
+
                     baseHP += 8;
                     hitDie.add(8);
                     features.add(new Feature("Spellcasting", "[WIP]", "Bard", "PHB"));
@@ -1023,7 +1061,18 @@ public class Main {
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
                     skills.addskill(new Skill("Wisdom", 1,  "St"));
                     skills.addskill(new Skill("Charisma", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("History", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Medicine", 1, "Sk"));
+                    Sks.add(new Skill("Persuasion", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 8;
                     hitDie.add(8);
                     features.add(new Feature("Spellcasting", "[WIP]", "Cleric", "PHB"));
@@ -1050,7 +1099,21 @@ public class Main {
                     skills.addskill(new Skill("Herbalism Kit", 1,  "t"));
                     skills.addskill(new Skill("Wisdom", 1,  "St"));
                     skills.addskill(new Skill("Intelligence", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Animal Handling", 1, "Sk"));
+                    Sks.add(new Skill("Arcana", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Nature", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("Survival", 1, "Sk"));
+                    Sks.add(new Skill("Medicine", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 8;
                     hitDie.add(8);
                     features.add(new Feature("Druidic", "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.", "Druid", "PHB"));
@@ -1067,17 +1130,27 @@ public class Main {
                     skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
                     skills.addskill(new Skill("Strength", 1,  "St"));
                     skills.addskill(new Skill("Constitution", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Animal Handling", 1, "Sk"));
+                    Sks.add(new Skill("Acrobatics", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("History", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("Survival", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 10;
                     hitDie.add(10);
                     features.add(new Feature("Second Wind", "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.\n" +
                             "\n" +
                             "Once you use this feature, you must finish a short or long rest before you can use it again.", "Fighter", "PHB"));
-                    uInint = 0;
-                    while (uInint < 1 || uInint > 6) {
-                        System.out.println("As a Fighter you must choose a fighting style. 1:Archery, 2:Defense, 3:Dueling, 4:Great Weapon Fighting, 5:Protection, 6:Two-Weapon Fighting");
-                        uInint = scaa.nextInt();
-                    }
                     ArrayList<Skill> Fs = new ArrayList<>();
                     Fs.add(new FightingStyle("Archery", "You gain a +2 bonus to attack rolls you make with ranged weapons."));
                     Fs.add(new FightingStyle("Defense", "While you are wearing armor, you gain a +1 bonus to AC."));
@@ -1085,6 +1158,7 @@ public class Main {
                     Fs.add(new FightingStyle("Great Weapon Fighting", "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."));
                     Fs.add(new FightingStyle("Protection", "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.\n"));
                     Fs.add(new FightingStyle("Two-Weapon Fighting", "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."));
+                    listSkill(Fs, skills);
                 }
                 break;
             case 6:
@@ -1095,7 +1169,21 @@ public class Main {
                     //choose 1 tool
                     skills.addskill(new Skill("Strength", 1,  "St"));
                     skills.addskill(new Skill("Dexterity", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    Sks.add(new Skill("Acrobatics", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("History", 1, "Sk"));
+                    Sks.add(new Skill("Stealth", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 8;
                     hitDie.add(8);
                     features.add(new Feature("Unarmored Defence", "Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.", "Monk", "PHB"));
@@ -1119,7 +1207,19 @@ public class Main {
                     skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
                     skills.addskill(new Skill("Wisdom", 1,  "St"));
                     skills.addskill(new Skill("Charisma", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Medicine", 1, "Sk"));
+                    Sks.add(new Skill("Persuasion", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 10;
                     hitDie.add(10);
                     features.add(new Feature("Divine Sense", "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the Hallow spell.\n" +
@@ -1144,7 +1244,23 @@ public class Main {
                     skills.addskill(new Skill("Martial Weapons", 1,  "mW"));
                     skills.addskill(new Skill("Strength", 1,  "St"));
                     skills.addskill(new Skill("Dexterity", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Animal Handling", 1, "Sk"));
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Investigation", 1, "Sk"));
+                    Sks.add(new Skill("Nature", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("Stealth", 1, "Sk"));
+                    Sks.add(new Skill("Survival", 1, "Sk"));
+                    System.out.println("Choose 3 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+                    System.out.println("Last skill");
+                    listSkill(Sks, skills); //Third
+
                     baseHP += 10;
                     hitDie.add(10);
                     uInint = 0;
@@ -1212,7 +1328,7 @@ public class Main {
                 }
                 break;
             case 9:
-                System.out.println("You have selected: Rogue\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
+                System.out.println("You have selected: Rogue\nRogues are stealthy and noble, and strike from the shadows when there least expected\nAre you sure You would like to play a Tiefling: (y/n)");
                 if (scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
@@ -1223,7 +1339,28 @@ public class Main {
                     skills.addskill(new Skill("Theves Tool's", 1,  "t"));
                     skills.addskill(new Skill("Dexterity", 1,  "St"));
                     skills.addskill(new Skill("Intelligence", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Acrobatics", 1, "Sk"));
+                    Sks.add(new Skill("Athletics", 1, "Sk"));
+                    Sks.add(new Skill("Deception", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Investigation", 1, "Sk"));
+                    Sks.add(new Skill("Perception", 1, "Sk"));
+                    Sks.add(new Skill("Performance", 1, "Sk"));
+                    Sks.add(new Skill("Persuasion", 1, "Sk"));
+                    Sks.add(new Skill("Slight of Hand", 1, "Sk"));
+                    Sks.add(new Skill("Stealth", 1, "Sk"));
+                    System.out.println("Choose 4 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+                    System.out.println("Third skill");
+                    listSkill(Sks, skills); //Third
+                    System.out.println("Fourth skill");
+                    listSkill(Sks, skills); //4th
+
                     baseHP += 10;
                     hitDie.add(10);
                     features.add(new Feature("Sneak Attack","Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.\n" +
@@ -1248,7 +1385,19 @@ public class Main {
                     skills.addskill(new Skill("Light Crossbows", 1,  "sW"));
                     skills.addskill(new Skill("Constitution", 1,  "St"));
                     skills.addskill(new Skill("Charisma", 1,  "St"));
-                    //Choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Arcana", 1, "Sk"));
+                    Sks.add(new Skill("Deception", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Persuasion", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 6;
                     hitDie.add(6);
                     features.add(new Feature("Spellcasting", "[WIP]", "Sorcerer", "PHB"));
@@ -1262,7 +1411,21 @@ public class Main {
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
                     skills.addskill(new Skill("Wisdom", 1,  "St"));
                     skills.addskill(new Skill("Charisma", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Arcana", 1, "Sk"));
+                    Sks.add(new Skill("Deception", 1, "Sk"));
+                    Sks.add(new Skill("History", 1, "Sk"));
+                    Sks.add(new Skill("Intimidation", 1, "Sk"));
+                    Sks.add(new Skill("Investigation", 1, "Sk"));
+                    Sks.add(new Skill("Nature", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
+
                     baseHP += 8;
                     hitDie.add(8);
                     features.add(new Feature("Pact Magic", "[WIP]", "Warlock", "PHB"));
@@ -1279,7 +1442,19 @@ public class Main {
                     skills.addskill(new Skill("Light Crossbows", 1,  "sW"));
                     skills.addskill(new Skill("Wisdom", 1,  "St"));
                     skills.addskill(new Skill("Intelligence", 1,  "St"));
-                    //choose 2
+
+                    ArrayList<Skill> Sks = new ArrayList<>();
+                    Sks.add(new Skill("Arcana", 1, "Sk"));
+                    Sks.add(new Skill("History", 1, "Sk"));
+                    Sks.add(new Skill("Insight", 1, "Sk"));
+                    Sks.add(new Skill("Investigation", 1, "Sk"));
+                    Sks.add(new Skill("Medicine", 1, "Sk"));
+                    Sks.add(new Skill("Religion", 1, "Sk"));
+                    System.out.println("Choose 2 Skills (one at a time)");
+                    listSkill(Sks, skills); //first
+                    System.out.println("Next skill");
+                    listSkill(Sks, skills); //second
+
                     baseHP += 6;
                     hitDie.add(6);
                     features.add(new Feature("Spellcasting", "[WIP]", "Wizard", "PHB"));
