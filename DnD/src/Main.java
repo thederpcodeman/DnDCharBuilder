@@ -1470,7 +1470,39 @@ public class Main {
 
         System.out.println();
         System.out.println("Step 5: Backround");
-        System.out.println("Your characters backround represents who they were before they became an adventurer, it has some limited, annd mostly flavorful mechanical impacts.");
+        System.out.println("Your characters background represents who they were before they became an adventurer, it has some limited, and mostly flavorful, mechanical impact.");
+        System.out.println("Choose a background:\n1:Acolyte, 2:Charlatan, 3:Criminal, 4:Entertainer\n5:Folk Hero, 6:Guild Artisan, 7:Hermit, 8:Noble\n9:Outlander, 10:Sage, 11:Sailor, 12:Soldier\n13:Urchin");
+        uInint = scaa.nextInt();
+        scaa.nextLine();
+        String background = "";
+        switch(uInint) {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+        }
 
     }
 
