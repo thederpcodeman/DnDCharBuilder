@@ -1477,8 +1477,18 @@ public class Main {
         String background = "";
         switch(uInint) {
             case 1:
+                background = "Acolyte";
+                skills.addskill(new Skill("Any Language", 1,  "l"));
+                skills.addskill(new Skill("Any Language", 1,  "l"));
+                skills.addskill(new Skill("Insight", 1,  "Sk"));
+                skills.addskill(new Skill("Religion", 1,  "Sk"));
                 break;
             case 2:
+                background = "Chalatan";
+                skills.addskill(new Skill("Deception", 1,  "Sk"));
+                skills.addskill(new Skill("Sleight of Hand", 1,  "Sk"));
+                skills.addskill(new Skill("Disguise Kit", 1,  "t"));
+                skills.addskill(new Skill("Forgery Kit", 1,  "t"));
                 break;
             case 3:
                 break;
