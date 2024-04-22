@@ -1484,21 +1484,42 @@ public class Main {
                 skills.addskill(new Skill("Religion", 1,  "Sk"));
                 break;
             case 2:
-                background = "Chalatan";
+                background = "Charlatan";
                 skills.addskill(new Skill("Deception", 1,  "Sk"));
                 skills.addskill(new Skill("Sleight of Hand", 1,  "Sk"));
                 skills.addskill(new Skill("Disguise Kit", 1,  "t"));
                 skills.addskill(new Skill("Forgery Kit", 1,  "t"));
                 break;
             case 3:
+                background = "Criminal";
+                skills.addskill(new Skill("Deception", 1,  "Sk"));
+                skills.addskill(new Skill("Stealth", 1,  "Sk"));
+                skills.addskill(new Skill("Thieves tools", 1,  "t"));
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Gaming set?
                 break;
             case 4:
+                background = "Entertainer";
+                skills.addskill(new Skill("Acrobatics", 1,  "Sk"));
+                skills.addskill(new Skill("Performance", 1,  "Sk"));
+                skills.addskill(new Skill("Disguise Kit", 1,  "t"));
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); musical instrument?
                 break;
             case 5:
+                background = "Folk Hero";
+                skills.addskill(new Skill("Animal Handling", 1,  "Sk"));
+                skills.addskill(new Skill("Survival", 1,  "Sk"));
+                skills.addskill(new Skill("Land Vehicles", 1,  "t"));//?
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Artisans tool?
                 break;
             case 6:
+                background = "Guild Artisan";
+                skills.addskill(new Skill("Insight", 1,  "Sk"));
+                skills.addskill(new Skill("Persuasion", 1,  "Sk"));
+                skills.addskill(new Skill("Any Language", 1,  "l"));//?
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Artisans tool?
                 break;
             case 7:
+
                 break;
             case 8:
                 break;
