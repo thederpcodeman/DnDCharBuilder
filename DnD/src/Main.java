@@ -1515,19 +1515,43 @@ public class Main {
                 background = "Guild Artisan";
                 skills.addskill(new Skill("Insight", 1,  "Sk"));
                 skills.addskill(new Skill("Persuasion", 1,  "Sk"));
-                skills.addskill(new Skill("Any Language", 1,  "l"));//?
+                skills.addskill(new Skill("Any Language", 1,  "l"));//
                 //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Artisans tool?
                 break;
             case 7:
-
+                background = "Hermit";
+                skills.addskill(new Skill("Medicine", 1,  "Sk"));
+                skills.addskill(new Skill("Religion", 1,  "Sk"));
+                skills.addskill(new Skill("Herbalism Kit", 1,  "t"));//?
+                skills.addskill(new Skill("Any Language", 1,  "l"));
                 break;
             case 8:
+                background = "Noble";
+                skills.addskill(new Skill("History", 1,  "Sk"));
+                skills.addskill(new Skill("Persuasion", 1,  "Sk"));
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Gaming set?
+                skills.addskill(new Skill("Any Language", 1,  "l"));
                 break;
             case 9:
+                background = "Outlander";
+                skills.addskill(new Skill("Athletics", 1,  "Sk"));
+                skills.addskill(new Skill("Survival", 1,  "Sk"));
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); musical instrument?
+                skills.addskill(new Skill("Any Language", 1,  "l"));
                 break;
             case 10:
+                background = "Sage";
+                skills.addskill(new Skill("Arcana", 1,  "Sk"));
+                skills.addskill(new Skill("History", 1,  "Sk"));
+                skills.addskill(new Skill("Any Language", 1,  "l"));
+                skills.addskill(new Skill("Any Language", 1,  "l"));
                 break;
             case 11:
+                background = "Sailor";
+                skills.addskill(new Skill("Athletics", 1,  "Sk"));
+                skills.addskill(new Skill("Perception", 1,  "Sk"));
+                skills.addskill(new Skill("Navigator's Tools", 1,  "t"));
+                skills.addskill(new Skill("Water Vehicles", 1,  "t"));//?
                 break;
             case 12:
                 break;
