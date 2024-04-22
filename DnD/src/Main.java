@@ -1494,7 +1494,7 @@ public class Main {
                 background = "Criminal";
                 skills.addskill(new Skill("Deception", 1,  "Sk"));
                 skills.addskill(new Skill("Stealth", 1,  "Sk"));
-                skills.addskill(new Skill("Thieves tools", 1,  "t"));
+                skills.addskill(new Skill("Thieves' tools", 1,  "t"));
                 //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Gaming set?
                 break;
             case 4:
@@ -1554,8 +1554,53 @@ public class Main {
                 skills.addskill(new Skill("Water Vehicles", 1,  "t"));//?
                 break;
             case 12:
+                background = "Soldier";
+                skills.addskill(new Skill("Athletics", 1,  "Sk"));
+                skills.addskill(new Skill("Intimidation", 1,  "Sk"));
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Gaming set?
+                skills.addskill(new Skill("Land Vehicles", 1,  "t"));//?
                 break;
             case 13:
+                background = "Urchin";
+                skills.addskill(new Skill("Sleight of Hand", 1,  "Sk"));
+                skills.addskill(new Skill("Stealth", 1,  "Sk"));
+                skills.addskill(new Skill("Disguise kit", 1,  "t"));
+                skills.addskill(new Skill("thieves' tools", 1,  "t"));
+                break;
+            default:
+                background = "Other";
+                ArrayList<Skill> Sks = new ArrayList<>();
+                Sks.add(new Skill("Acrobatics", 1, "Sk"));
+                Sks.add(new Skill("Animal Handling", 1, "Sk"));
+                Sks.add(new Skill("Arcana", 1, "Sk"));
+                Sks.add(new Skill("Athletics", 1, "Sk"));
+                Sks.add(new Skill("Deception", 1, "Sk"));
+                Sks.add(new Skill("History", 1, "Sk"));
+                Sks.add(new Skill("Insight", 1, "Sk"));
+                Sks.add(new Skill("Intimidation", 1, "Sk"));
+                Sks.add(new Skill("Investigation", 1, "Sk"));
+                Sks.add(new Skill("Medicine", 1, "Sk"));
+                Sks.add(new Skill("Nature", 1, "Sk"));
+                Sks.add(new Skill("Perception", 1, "Sk"));
+                Sks.add(new Skill("Performance", 1, "Sk"));
+                Sks.add(new Skill("Persuasion", 1, "Sk"));
+                Sks.add(new Skill("Religion", 1, "Sk"));
+                Sks.add(new Skill("Slight of Hand", 1, "Sk"));
+                Sks.add(new Skill("Stealth", 1, "Sk"));
+                Sks.add(new Skill("Survival", 1, "Sk"));
+                Sks.add(new Skill("Background Bonus Language", 1, "l"));
+                Sks.add(new Skill("Background Extra Language", 1, "l"));
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); Gaming set?
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); musical instrument?
+                //skills.addskill(new Skill("Forgery Kit", 1,  "t")); tool?
+                System.out.println("Choose 4 Skills (one at a time)");
+                listSkill(Sks, skills); //first
+                System.out.println("Next skill");
+                listSkill(Sks, skills); //second
+                System.out.println("Third skill");
+                listSkill(Sks, skills); //second
+                System.out.println("Last skill");
+                listSkill(Sks, skills); //second
                 break;
         }
 
