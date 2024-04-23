@@ -20,12 +20,12 @@ public class Main {
             System.out.println("How would you like to make your character? (1: Manual(WIP), 2: Simplified(WIP), 3:Randomized(WIP))");
             uInint = scaa.nextInt();
         }// ask the user to begin
-
+        int GenMode = uInint;
         //Assuming uInt == 1 for now
 
         scaa.nextLine();
         uIn = "";
-        while (!uIn.equals("y")) { //Step 1, just a second are you sure, should be skipped when randomized.
+        while (!uIn.equals("y") && (GenMode != 3)) { //Step 1, just a second are you sure, should be skipped when randomized.
             System.out.println();
             System.out.println("Step 1: the most important step.");
             System.out.println("The most important step when creating a character is to create a character concept,\nWhat kind of character are you looking to make?\nWhat kind of character would you enjoy role-playing?");
@@ -34,15 +34,20 @@ public class Main {
         }
         uInint = 0;
         System.out.println();
-        System.out.println("Step 2: Ability Scores");
-        System.out.println("A characters ability scores represent their innate physical and mental attributes,\nThey are: Strength (Str), Dexterity (Dex), Constitution (Con), Intelligence (Int), Wisdom (Wis), and Charisma (Cha).");
-        while (uInint <= 1 || uInint > 6) {
-            System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats (default)\n3:Standard array\n4:Point buy\n5:Randomize my stats please\n6:I'd like to apply my stats manually");
-            uInint = scaa.nextInt();
-            if (uInint == 1){
-                System.out.println("\nStrength represents physical strength, it is the primary stat of Barbarians, Fighters and Paladins, and determines your carrying capacity\nDexterity represents agility, finesse, and speed, it is the primary stat of Fighters, Monks, and Rangers, it determines your evasiveness in combat\nConstitution represents your toughness, and determines your maximum HP\nIntelligence represents your memory, book smarts, and ability to think quickly, it is the primary stat of Wizards\nWisdom represents experiential knowledge, street smarts, and, well, wisdom, it is the primary stat of Clerics, Druids, Monks, and Rangers, it determines your passive perception\nCharisma represents your force of personality, it is the primary stat of Bards, Paladins, Sorcerers, and Warlocks.\n");
+        if (GenMode != 3){
+            System.out.println("Step 2: Ability Scores");
+            System.out.println("A characters ability scores represent their innate physical and mental attributes,\nThey are: Strength (Str), Dexterity (Dex), Constitution (Con), Intelligence (Int), Wisdom (Wis), and Charisma (Cha).");
+            while (uInint <= 1 || uInint > 6) {
+                System.out.println("There are multiple ways to assign a characters stats, more than what is listed here, your DM has the final say on what methods are allowed.\n1:Give me more information\n2:Roll for stats (default)\n3:Standard array\n4:Point buy\n5:Randomize my stats please\n6:I'd like to apply my stats manually");
+                uInint = scaa.nextInt();
+                if (uInint == 1){
+                    System.out.println("\nStrength represents physical strength, it is the primary stat of Barbarians, Fighters and Paladins, and determines your carrying capacity\nDexterity represents agility, finesse, and speed, it is the primary stat of Fighters, Monks, and Rangers, it determines your evasiveness in combat\nConstitution represents your toughness, and determines your maximum HP\nIntelligence represents your memory, book smarts, and ability to think quickly, it is the primary stat of Wizards\nWisdom represents experiential knowledge, street smarts, and, well, wisdom, it is the primary stat of Clerics, Druids, Monks, and Rangers, it determines your passive perception\nCharisma represents your force of personality, it is the primary stat of Bards, Paladins, Sorcerers, and Warlocks.\n");
+                }
             }
+        }else{
+            uInint = 5;
         }
+
         int Str = 0;
         int Dex = 0;
         int Con = 0;
@@ -402,13 +407,17 @@ public class Main {
         ArrayList<Feature> features = new ArrayList<>();
         Proficencies skills = new Proficencies();
         while (cycle) {
-            System.out.println("Choose your characters race \n1:Dwarf, 2:Elf, 3:Halfling, 4:Human,\n5:Dragonborn, 6:Gnome, 7:Half-Elf, 8:Half-Orc\n9:Tiefling");
-            uInint = scaa.nextInt();
+            if (GenMode == 3) {
+                uInint = (int) (Math.random() * 9) + 1;
+            }else{
+                System.out.println("Choose your characters race \n1:Dwarf, 2:Elf, 3:Halfling, 4:Human,\n5:Dragonborn, 6:Gnome, 7:Half-Elf, 8:Half-Orc\n9:Tiefling");
+                uInint = scaa.nextInt();
+            }
             scaa.nextLine();
             switch(uInint){
                 case 1:
                     System.out.println("You have selected: Dwarf\nDwarves are short and stout humanoids, dwarves are known for their skill and resilience. They gain a +2 to Con and a subclass (+1-2)\nAre you sure You would like to play a dwarf: (y/n)");
-                    if (scaa.nextLine().equalsIgnoreCase("y")){
+                    if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
                         race = "Dwarf";
                         speed = 25;
@@ -484,7 +493,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("You have selected: Elf\nElves are slender and graceful humanoids, elves are known for their beauty, gracefulness and long-lifespans. They gain a +2 to Dex and a subclass (+1)\nAre you sure You would like to play an elf: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if ((GenMode == 3 ) || scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Elf";
                         speed = 30;
@@ -582,7 +591,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("You have selected: Halfling\nHalflings are small and friendly humanoids, Halflings are known for their hospitality, natural luck, and simple natures. They gain a +2 to Dex, and a subclass (+1)\nAre you sure You would like to play a Halfling: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if ((GenMode == 3 ) || scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Halfling";
                         speed = 25;
@@ -628,7 +637,7 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("You have selected: Human\nThey gain +1 to all stats, or optionally, they gain +1 to 2 ability scores of your choice(WIP)\nAre you sure You would like to play a Halfling: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")) {
+                    if ((GenMode == 3 ) || scaa.nextLine().toLowerCase().equals("y")) {
                         cycle = false;
                         race = "Human";
                         speed = 30;
@@ -671,7 +680,7 @@ public class Main {
                     break;
                     case 5:
                     System.out.println("You have selected: Dragonborn\nShaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race. They gain a +2 to Str, and +1 to Cha, and have a breath weapon\nAre you sure You would like to play a Dragonborn: (y/n)");
-                    if (scaa.nextLine().equalsIgnoreCase("y")){
+                    if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
                         race = "Dragonborn";
                         speed = 30;
@@ -745,7 +754,7 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("You have selected: Gnome\nGnomes are small and inventive humanoids, gnomes are known for their close-night communities, and love of invention and life. They gain a +2 to Int, and a subclass (+1)\nAre you sure You would like to play a Halfling: (y/n)");
-                    if (scaa.nextLine().equalsIgnoreCase("y")){
+                    if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")){
                         cycle = false;
                         race = "Gnome";
                         speed = 25;
@@ -797,7 +806,7 @@ public class Main {
                     break;
                     case 7:
                     System.out.println("You have selected: Half-Elf\nHalf-Elves are half elf, half human, and display a mix of the traits of both. They gain a +2 to Cha, and +1 to 2 other stats\nAre you sure You would like to play a Half-Elf: (y/n)");
-                    if (scaa.nextLine().toLowerCase().equals("y")){
+                    if ((GenMode == 3 ) || scaa.nextLine().toLowerCase().equals("y")){
                         cycle = false;
                         race = "Half-Elf";
                         speed = 30;
@@ -887,7 +896,7 @@ public class Main {
                     break;
                 case 8:
                     System.out.println("You have selected: Half-Orc\nHalf-Orcs are half orc, half human, and display a mix of the traits of both. They gain a +2 to Str, and +1 to Con, and have savage attacks and relentless endurance\nAre you sure You would like to play a Half-Orc: (y/n)");
-                    if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                         cycle = false;
                         race = "Half-Orc";
                         speed = 30;
@@ -920,7 +929,7 @@ public class Main {
                     break;
                 case 9:
                     System.out.println("You have selected: Tiefling\nTiefling are mostly human, but with fiendish heritage somewhere in their bloodline. They gain a +2 to Cha, and +1 to Int, and have resistance to fire damage\nAre you sure You would like to play a Tiefling: (y/n)");
-                    if (scaa.nextLine().equalsIgnoreCase("y")) {
+                    if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                         cycle = false;
                         race = "Tiefling";
                         speed = 30;
