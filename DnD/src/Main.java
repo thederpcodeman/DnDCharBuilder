@@ -979,7 +979,7 @@ public class Main {
         switch(uInint){
             case 1:
                 System.out.println("You have selected: Barbarian\n Barbarians are powerful warriors that use their brute strength and reckless anger to destroy foes, most barbarians are tanky melee fighters.\nAre you sure you would like to be a barbarian (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     cCl = "Barbarian";
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Medium Armor", 1,  "A"));
@@ -1010,7 +1010,7 @@ public class Main {
                 break;
             case 2:
                 System.out.println("You have selected: Bard\nBards are trained performers, musicians, and artists who channel magic through their art\nWould you like to be a bard: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     cCl = "Bard";
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
@@ -1062,7 +1062,7 @@ public class Main {
                 break;
             case 3:
                 System.out.println("You have selected: Cleric\nClerics are divine spellcasters, and often healers, but can happily fill nearly any roll in the party\nAre you sure You would like to play a Cleric: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     cCl = "Cleric";
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Medium Armor", 1,  "A"));
@@ -1090,7 +1090,7 @@ public class Main {
                 break;
             case 4:
                 System.out.println("You have selected: Druid\nDruids commune with and harness the forces of nature in their magic, and strive to protect the natural order, they will not wear metal.\nAre you sure You would like to play a Druid: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     cCl = "Druid";
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Medium Armor", 1,  "A"));
@@ -1132,7 +1132,7 @@ public class Main {
                 break;
             case 5:
                 System.out.println("You have selected: Fighter\nFighters are the masters of martial weapons, trained to perfection in their weapon of choice, and usually every other weapon\nAre you sure you want to play a fighter: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("All Armor", 1,  "A"));
                     skills.addskill(new Skill("Shields", 1,  "A"));
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
@@ -1172,7 +1172,7 @@ public class Main {
                 break;
             case 6:
                 System.out.println("You have selected: Monk\nMonks live together in secluded monasteries, scattered throughout the countryside, these monks live and train together, and many of them, train in combat.\nMost monks never use this ability, but some leave their monestaries and become adventurers.\nThey are masters of their own bodies, are you sure you want to play a Monk: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
                     skills.addskill(new Skill("Shortswords", 1,  "mW"));
                     //choose 1 tool
@@ -1209,7 +1209,7 @@ public class Main {
                 break;
             case 7:
                 System.out.println("You have selected: Paladin\nPaladins are oath-swarn champions, often acting in sevice of a higher power, these knights use both their own might and the power of their oaths\nwould you like to play a paladin: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("All Armor", 1,  "A"));
                     skills.addskill(new Skill("Shields", 1,  "A"));
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
@@ -1245,7 +1245,7 @@ public class Main {
                 break;
             case 8:
                 System.out.println("You have selected: Ranger\nAre you sure You would like to play a Ranger: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Medium Armor", 1,  "A"));
                     skills.addskill(new Skill("Shields", 1,  "A"));
@@ -1338,7 +1338,7 @@ public class Main {
                 break;
             case 9:
                 System.out.println("You have selected: Rogue\nRogues are stealthy and noble, and strike from the shadows when there least expected\nAre you sure You would like to play a Tiefling: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
                     skills.addskill(new Skill("Longswords", 1,  "mW"));
@@ -1386,7 +1386,7 @@ public class Main {
                 break;
             case 10:
                 System.out.println("You have selected: Sorcerer\nSorcerers are people who gained magic, not through rigorous study, or through a deal or dealing with a higher power, but essentially at random\nAre you sure You would like to play a Sorcerer: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Daggers", 1,  "sW"));
                     skills.addskill(new Skill("Darts", 1,  "sW"));
                     skills.addskill(new Skill("Slings", 1,  "sW"));
@@ -1415,7 +1415,7 @@ public class Main {
                 break;
             case 11:
                 System.out.println("You have selected: Warlock\nWarlocks are spellcasters that derive their power from a deal with a powerful entity\nAre you sure You would like to play a Warlock: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Light Armor", 1,  "A"));
                     skills.addskill(new Skill("Simple Weapons", 1,  "sW"));
                     skills.addskill(new Skill("Wisdom", 1,  "St"));
@@ -1443,7 +1443,7 @@ public class Main {
                 break;
             case 12:
                 System.out.println("You have selected: Wizard\nWizards are scholars of magic, who use their knowledge of the weave of magic to harness arcane power\nAre you sure You would like to play a Tiefling: (y/n)");
-                if (scaa.nextLine().equalsIgnoreCase("y")) {
+                if ((GenMode == 3 ) || scaa.nextLine().equalsIgnoreCase("y")) {
                     skills.addskill(new Skill("Daggers", 1,  "sW"));
                     skills.addskill(new Skill("Darts", 1,  "sW"));
                     skills.addskill(new Skill("Slings", 1,  "sW"));
@@ -1481,6 +1481,9 @@ public class Main {
         System.out.println("Step 5: Backround");
         System.out.println("Your characters background represents who they were before they became an adventurer, it has some limited, and mostly flavorful, mechanical impact.");
         System.out.println("Choose a background:\n1:Acolyte, 2:Charlatan, 3:Criminal, 4:Entertainer\n5:Folk Hero, 6:Guild Artisan, 7:Hermit, 8:Noble\n9:Outlander, 10:Sage, 11:Sailor, 12:Soldier\n13:Urchin");
+        if (GenMode == 3){
+            uInint = (int)(Math.random() * 13 + 1);
+        }
         uInint = scaa.nextInt();
         scaa.nextLine();
         String background = "";
@@ -1631,7 +1634,7 @@ public class Main {
     public static void listSkill(ArrayList<Skill> list, Proficencies prof){
         ArrayList<Skill> un = new ArrayList<Skill>();
         for (Skill i : list){
-            if (prof.getskill(i.name) != 0){
+            if ((i.name.equalsIgnoreCase("Any Language")) || (prof.getskill(i.name) != 0)){
                 un.add(i);
             }
         }
