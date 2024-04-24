@@ -475,8 +475,12 @@ public class Main {
                             skills.addskill(new Skill("medium armor", 1,  "A"));
                             int uInint2 = 0;
                             while (uInint2 < 1 || uInint2 > 2) {
-                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                                uInint2 = scaa.nextInt();
+                                if (GenMode == 3){
+                                    uInint2 = 2;
+                                }else{
+                                    System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                    uInint2 = scaa.nextInt();
+                                }
                             }
                             if (uInint2 == 1){
                                 System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -522,8 +526,12 @@ public class Main {
 
                             int uInint2 = 0;
                             while (uInint2 < 1 || uInint2 > 2) {
-                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                                uInint2 = scaa.nextInt();
+                                if (GenMode == 3){
+                                    uInint2 = 2;
+                                }else{
+                                    System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                    uInint2 = scaa.nextInt();
+                                }
                             }
                             if (uInint2 == 1){
                                 System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -573,8 +581,12 @@ public class Main {
 
                             int uInint2 = 0;
                             while (uInint2 < 1 || uInint2 > 2) {
-                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                                uInint2 = scaa.nextInt();
+                                if (GenMode == 3){
+                                    uInint2 = 2;
+                                }else{
+                                    System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                    uInint2 = scaa.nextInt();
+                                }
                             }
                             if (uInint2 == 1){
                                 System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -663,8 +675,12 @@ public class Main {
 
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
-                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                            uInint2 = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint2 = 2;
+                            }else{
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
                         }
                         if (uInint2 == 1) {
                             System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -737,8 +753,12 @@ public class Main {
 
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
-                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                            uInint2 = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint2 = 2;
+                            }else{
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
                         }
                         if (uInint2 == 1) {
                             System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -789,8 +809,12 @@ public class Main {
 
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
-                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                            uInint2 = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint2 = 2;
+                            }else{
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
                         }
                         if (uInint2 == 1) {
                             System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -877,8 +901,12 @@ public class Main {
 
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
-                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                            uInint2 = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint2 = 2;
+                            }else{
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
                         }
                         if (uInint2 == 1) {
                             System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -910,8 +938,12 @@ public class Main {
                         skills.addskill(new Skill("Orc", 1,  "L"));uInint = 0;
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
-                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                            uInint2 = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint2 = 2;
+                            }else{
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
                         }
                         if (uInint2 == 1) {
                             System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -942,8 +974,12 @@ public class Main {
                         skills.addskill(new Skill("Infernal", 1,  "L"));
                         int uInint2 = 0;
                         while (uInint2 < 1 || uInint2 > 2) {
-                            System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
-                            uInint2 = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint2 = 2;
+                            }else{
+                                System.out.println("how would you like to assign height and weight? (1:Manually, 2: Randomly)");
+                                uInint2 = scaa.nextInt();
+                            }
                         }
                         if (uInint2 == 1) {
                             System.out.println("Enter Height in inches (4ft = 48in, 5ft = 60in):");
@@ -972,8 +1008,13 @@ public class Main {
         System.out.println("Step 4: Class");
         System.out.println("Character class is the most important thing about a character, while at higher levels you are allowed to \"Multiclass\" Taking levels in more than one class, for now you are only selecting your class for 1st level. ");
         System.out.println("1:Barbarian, 2:Bard, 3:Cleric, 4:Druid\n5:Fighter, 6:Monk, 7:Paladin, 8:Ranger\n9:Rogue, 10:Sorcerer, 11:Warlock, 12:Wizard");
-        uInint = scaa.nextInt();
-        scaa.nextLine();
+        if (GenMode == 3){
+            uInint = (int) (Math.random() * 12) +1;
+        }else{
+            uInint = scaa.nextInt();
+            scaa.nextLine();
+        }
+
         String cCl = "";
         ArrayList<Integer> hitDie = new ArrayList<>();
         switch(uInint){
@@ -1483,9 +1524,11 @@ public class Main {
         System.out.println("Choose a background:\n1:Acolyte, 2:Charlatan, 3:Criminal, 4:Entertainer\n5:Folk Hero, 6:Guild Artisan, 7:Hermit, 8:Noble\n9:Outlander, 10:Sage, 11:Sailor, 12:Soldier\n13:Urchin");
         if (GenMode == 3){
             uInint = (int)(Math.random() * 13 + 1);
+        }else{
+            uInint = scaa.nextInt();
+            scaa.nextLine();
         }
-        uInint = scaa.nextInt();
-        scaa.nextLine();
+
         String background = "";
         switch(uInint) {
             case 1:
