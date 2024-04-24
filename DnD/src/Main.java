@@ -997,9 +997,9 @@ public class Main {
                     Sks.add(new Skill("Perception", 1, "Sk"));
                     Sks.add(new Skill("Survival", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 12;
                     hitDie.add(12);
@@ -1041,11 +1041,11 @@ public class Main {
                     Sks.add(new Skill("Stealth", 1, "Sk"));
                     Sks.add(new Skill("Survival", 1, "Sk"));
                     System.out.println("Choose 3 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
                     System.out.println("Last skill");
-                    listSkill(Sks, skills); //Third
+                    listSkill(Sks, skills, GenMode); //Third
 
                     baseHP += 8;
                     hitDie.add(8);
@@ -1078,9 +1078,9 @@ public class Main {
                     Sks.add(new Skill("Persuasion", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 8;
                     hitDie.add(8);
@@ -1119,9 +1119,9 @@ public class Main {
                     Sks.add(new Skill("Medicine", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 8;
                     hitDie.add(8);
@@ -1151,9 +1151,9 @@ public class Main {
                     Sks.add(new Skill("Perception", 1, "Sk"));
                     Sks.add(new Skill("Survival", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 10;
                     hitDie.add(10);
@@ -1167,7 +1167,7 @@ public class Main {
                     Fs.add(new FightingStyle("Great Weapon Fighting", "When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit."));
                     Fs.add(new FightingStyle("Protection", "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.\n"));
                     Fs.add(new FightingStyle("Two-Weapon Fighting", "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."));
-                    listSkill(Fs, skills);
+                    listSkill(Fs, skills, GenMode);
                 }
                 break;
             case 6:
@@ -1189,9 +1189,9 @@ public class Main {
                     Sks.add(new Skill("Stealth", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 8;
                     hitDie.add(8);
@@ -1225,9 +1225,9 @@ public class Main {
                     Sks.add(new Skill("Persuasion", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 10;
                     hitDie.add(10);
@@ -1264,11 +1264,11 @@ public class Main {
                     Sks.add(new Skill("Stealth", 1, "Sk"));
                     Sks.add(new Skill("Survival", 1, "Sk"));
                     System.out.println("Choose 3 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
                     System.out.println("Last skill");
-                    listSkill(Sks, skills); //Third
+                    listSkill(Sks, skills, GenMode); //Third
 
                     baseHP += 10;
                     hitDie.add(10);
@@ -1362,13 +1362,13 @@ public class Main {
                     Sks.add(new Skill("Slight of Hand", 1, "Sk"));
                     Sks.add(new Skill("Stealth", 1, "Sk"));
                     System.out.println("Choose 4 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
                     System.out.println("Third skill");
-                    listSkill(Sks, skills); //Third
+                    listSkill(Sks, skills, GenMode); //Third
                     System.out.println("Fourth skill");
-                    listSkill(Sks, skills); //4th
+                    listSkill(Sks, skills, GenMode); //4th
 
                     baseHP += 10;
                     hitDie.add(10);
@@ -1403,9 +1403,9 @@ public class Main {
                     Sks.add(new Skill("Persuasion", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 6;
                     hitDie.add(6);
@@ -1430,9 +1430,9 @@ public class Main {
                     Sks.add(new Skill("Nature", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
 
                     baseHP += 8;
@@ -1460,9 +1460,9 @@ public class Main {
                     Sks.add(new Skill("Medicine", 1, "Sk"));
                     Sks.add(new Skill("Religion", 1, "Sk"));
                     System.out.println("Choose 2 Skills (one at a time)");
-                    listSkill(Sks, skills); //first
+                    listSkill(Sks, skills, GenMode); //first
                     System.out.println("Next skill");
-                    listSkill(Sks, skills); //second
+                    listSkill(Sks, skills, GenMode); //second
 
                     baseHP += 6;
                     hitDie.add(6);
@@ -1606,13 +1606,13 @@ public class Main {
                 //skills.addskill(new Skill("Forgery Kit", 1,  "t")); musical instrument?
                 //skills.addskill(new Skill("Forgery Kit", 1,  "t")); tool?
                 System.out.println("Choose 4 Skills (one at a time)");
-                listSkill(Sks, skills); //first
+                listSkill(Sks, skills, GenMode); //first
                 System.out.println("Next skill");
-                listSkill(Sks, skills); //second
+                listSkill(Sks, skills, GenMode); //second
                 System.out.println("Third skill");
-                listSkill(Sks, skills); //second
+                listSkill(Sks, skills, GenMode); //second
                 System.out.println("Last skill");
-                listSkill(Sks, skills); //second
+                listSkill(Sks, skills, GenMode); //second
                 break;
         }
 
@@ -1631,7 +1631,7 @@ public class Main {
         Collections.sort(list);
         return (list.get(1) + list.get(2) + list.get(3));
     }
-    public static void listSkill(ArrayList<Skill> list, Proficencies prof){
+    public static void listSkill(ArrayList<Skill> list, Proficencies prof, int g){
         ArrayList<Skill> un = new ArrayList<Skill>();
         for (Skill i : list){
             if ((i.name.equalsIgnoreCase("Any Language")) || (prof.getskill(i.name) != 0)){
@@ -1644,12 +1644,17 @@ public class Main {
         Scanner scaaTheSecond = new Scanner(System.in);
         int u2 = 0;
         while (u2 < 1 || u2 > un.size()) {
-            System.out.print("\n");
-            System.out.print("Which would you like? ");
-            for (Skill i : un) {
-                System.out.print(un.indexOf(i) + ":" + i.name + "\n");
+            if (g == 3){
+                u2 = (int) ((Math.random() * un.size()) + 1);
+            }else{
+                System.out.print("\n");
+                System.out.print("Which would you like? ");
+                for (Skill i : un) {
+                    System.out.print(un.indexOf(i) + ":" + i.name + "\n");
+                }
+                u2 = scaaTheSecond.nextInt();
             }
-            u2 = scaaTheSecond.nextInt();
+
         }
         prof.addskill(un.get(u2 -1));
         return;
