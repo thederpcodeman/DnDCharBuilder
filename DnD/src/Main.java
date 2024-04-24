@@ -429,8 +429,12 @@ public class Main {
                         skills.addskill(new Skill("light hammers", 1,  "sW"));
                         skills.addskill(new Skill("warhammers", 1, "mW"));
                         while (uInint < 1 || uInint > 3) {
-                            System.out.println("As a dwarf you are proficient with one of the following of your choice: 1:smith's tools, 2:brewer's supplies, or 3:mason's tools");
-                            uInint = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint = (int)(Math.random() * 3) + 1;
+                            }else{
+                                System.out.println("As a dwarf you are proficient with one of the following of your choice: 1:smith's tools, 2:brewer's supplies, or 3:mason's tools");
+                                uInint = scaa.nextInt();
+                            }
                         }
                         if (uInint == 1){
                             skills.addskill(new Skill("smith's tools", 1,  "T"));
@@ -511,8 +515,12 @@ public class Main {
 
                         uInint = 0;
                         while (uInint < 1 || uInint > 3) {
-                            System.out.println("Their are 3 subraces of elves:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
-                            uInint = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint = (int)(Math.random() * 3) + 1;
+                            }else{
+                                System.out.println("Their are 3 subraces of elves:\nThe high elves, who gain +1 intelligence and a wizard cantrip\nThe wood elves, who gain +1 wisdom, and increased movement speed\nThe dark elves (drow), who gain +1 Charisma, increased darkvision, some minor magical abilities and a sensitivity to sunlight\nWhat would you like to be 1:High Elf, 2:Wood Elf, 3:Dark Elf");
+                                uInint = scaa.nextInt();
+                            }
                         }
                         if (uInint == 1){
                             Int += 1;
@@ -615,8 +623,12 @@ public class Main {
                         skills.addskill(new Skill("Halfling", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 2) {
-                            System.out.println("Their are 2 subraces of halfling:\nThe lightfoot halflings, who gain +1 charisma and can hide more easily\nThe stout halflings, who gain +1 constitution, and resistance to poison\nWhat would you like to be 1:Lightfoot, 2:Stout");
-                            uInint = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint = (int)(Math.random() * 2) + 1;
+                            }else{
+                                System.out.println("Their are 2 subraces of halfling:\nThe lightfoot halflings, who gain +1 charisma and can hide more easily\nThe stout halflings, who gain +1 constitution, and resistance to poison\nWhat would you like to be 1:Lightfoot, 2:Stout");
+                                uInint = scaa.nextInt();
+                            }
                         }
                         if (uInint == 1){
                             Cha += 1;
@@ -656,10 +668,6 @@ public class Main {
                         skills.addskill(new Skill("Common", 1,  "L"));uInint = 0;
                         skills.addskill(new Skill("Any Language", 1,  "L"));uInint = 0;
                         uInint = 0;
-                        while (uInint < 1 || uInint > 1) {
-                            System.out.println("Are you choosing Variant human 1:No, 2:Yes");
-                            uInint = scaa.nextInt();
-                        }
                         if (uInint == 1) {
                             Str += 1;
                             Dex += 1;
@@ -667,9 +675,6 @@ public class Main {
                             Int += 1;
                             Wis += 1;
                             Cha += 1;
-                            subrace = "Standard Human";
-
-                        } else if (uInint == 2) {
 
                         }
 
@@ -706,8 +711,12 @@ public class Main {
                         skills.addskill(new Skill("Draconic", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 10) {
-                            System.out.println("Their are many types of dragon, and as such many types of Dragonborn, you must choose one from which you inherit:\n1:Black, 2:Blue, 3:Brass, 4:Bronze, 5:Copper, 6:Gold, 7:Green, 8:Red, 9:Silver, 10:White");
-                            uInint = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint = (int)(Math.random() * 10) + 1;
+                            }else{
+                                System.out.println("Their are many types of dragon, and as such many types of Dragonborn, you must choose one from which you inherit:\n1:Black, 2:Blue, 3:Brass, 4:Bronze, 5:Copper, 6:Gold, 7:Green, 8:Red, 9:Silver, 10:White");
+                                uInint = scaa.nextInt();
+                            }
                         }
                         if (uInint == 1){
                             subrace = "Black Dragonborn";
@@ -785,8 +794,12 @@ public class Main {
                         skills.addskill(new Skill("Gnomish", 1,  "L"));uInint = 0;
                         uInint = 0;
                         while (uInint < 1 || uInint > 2) {
-                            System.out.println("Their are 2 subraces of Gnome:\nForest Gnomes, who gain +1 Dex, can talk to small animals and create small illusions\nRock Gnomes, who gain +1 Con, and passing knowledge of artificey\nWhat would you like to be 1:Forest Gnome, 2:Rock Gnome");
-                            uInint = scaa.nextInt();
+                            if (GenMode == 3){
+                                uInint = (int)(Math.random() * 2) + 1;
+                            }else{
+                                System.out.println("Their are 2 subraces of Gnome:\nForest Gnomes, who gain +1 Dex, can talk to small animals and create small illusions\nRock Gnomes, who gain +1 Con, and passing knowledge of artificey\nWhat would you like to be 1:Forest Gnome, 2:Rock Gnome");
+                                uInint = scaa.nextInt();
+                            }
                         }
                         if (uInint == 1){
                             Dex += 1;
